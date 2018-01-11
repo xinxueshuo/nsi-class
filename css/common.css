@@ -1,0 +1,92 @@
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    fieldset,
+    input,
+    textarea,
+    p,
+    blockquote,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .noPlPr {
+        padding-right: 0;
+        padding-left: 0
+    }
+    
+    .mt10 {
+        margin-top: 10px;
+    }
+    
+    .mt20 {
+        margin-top: 20px;
+    }
+    
+    .mt40 {
+        margin-top: 40px
+    }
+    
+    .mt45 {
+        margin-top: 45px;
+    }
+    
+    .mb10 {
+        margin-bottom: 10px;
+    }
+    
+    .mb50 {
+        margin-bottom: 50px
+    }
+    
+    .plr0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .dis_ib {
+        display: inline-block;
+    }
+    
+    ul,
+    ol {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none !important;
+    }
+    
+    img {
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+        /* height: auto; */
+    }
+    
+    .box_shadow {
+        box-shadow: 0 0 10px #666;
+    }
+    
+    @media (min-width: 1200px) {
+        .w1200 {
+            width: 1200px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }

@@ -1,0 +1,69 @@
+/* 顶部 */
+
+.container-fluid {
+    padding: 0;
+}
+
+.row,
+.container {
+    transition: all 1s;
+}
+
+.top {
+    background: #1d98de;
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, .2);
+}
+
+.containerTop {
+    padding-left: 0;
+    padding-right: 0;
+    height: 50px;
+}
+
+.containerTop .logo {
+    display: inline-block;
+    background: url("../images/logo.jpg");
+    width: 170px;
+    height: 50px;
+}
+
+.nav>li>a {
+    color: #fff;
+}
+
+.nav>li {
+    background: #1d98de;
+}
+
+.nav>li>a:hover {
+    color: #1d98de;
+    background: rgb(248, 246, 246);
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0;
+}
+
+.navbar-nav {
+    margin: 0 -15px;
+}
+
+.navbar-header {
+    margin-right: 20px;
+}
+
+.navbar-toggle {
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+
+.navbar-toggle>.icon-bar {
+    background: #FFF;
+}
+
+.navbar-collapse {
+    position: relative;
+    z-index: 10000;
+    border-color: #1983bf;
+}

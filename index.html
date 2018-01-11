@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新学说</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        @font-face {
+            font-family: 'Glyphicons Halflings';
+            src: url('../fonts/glyphicons-halflings-regular.eot');
+            src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="container-fluid top">
+        <div class="container containerTop">
+            <nav class="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="./index.html"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <li class="active"><a href="./live.html">正在直播<span class="sr-only">(current)</span></a></li>
+                        <li><a href="./userCenter.html">课程中心</a></li>
+                        <li><a href="#">讲师中心</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">购物车</a></li>
+                        <li><a href="./login.html" id="login">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <!-- 顶部END -->
+    <!-- banner -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./images/banner1.jpg" alt="...">
+                <div class="carousel-caption"> </div>
+            </div>
+            <div class="item">
+                <img src="./images/banner02.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/banner1.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- bannerEND -->
+    <!--video&list-->
+    <div class="container mt10">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6 playVideo">
+                <a href="./live.html" class="enter">点击进入</a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 description">
+                <div class="row lists">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 lecturer list_desc">
+                        <h5>讲师讲解</h5>
+                        <div class="scrollBox">
+                            <ul class="lecturer_explain autoRoll">
+                                <li>1.总监级别老师实战经验丰富，学完课程相当于有1年UI设计工作经验。</li>
+                                <li>2.课上直播直接与老师互动，随问随答。</li>
+                            </ul>
+                            <ul class="lecturer_explain autoRoll">
+                                <li>1.总监级别老师实战经验丰富，学完课程相当于有1年UI设计工作经验。</li>
+                                <li>2.课上直播直接与老师互动，随问随答。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 afford list_desc">
+                        <h5>为学生提供安全的学习环境</h5>
+                        <div class="scrollBox">
+                            <ul class="lecturer_explain autoRoll">
+                                <li>1.总监级别老师实战经验丰富，学完课程相当于有1年UI设计工作经验。</li>
+                                <li>2.课上直播直接与老师互动，随问随答。</li>
+                            </ul>
+                            <ul class="lecturer_explain autoRoll">
+                                <li>1.总监级别老师实战经验丰富，学完课程相当于有1年UI设计工作经验。</li>
+                                <li>2.课上直播直接与老师互动，随问随答。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--video&list_END -->
+    <!--prepareLessons-->
+    <div class="container mt40">
+        <h3 class="text-center mb50">备课中</h3>
+        <div class="row prepareLessons">
+            <div class="lesson pull-left mb10">
+                <a href="./detailLesson.html">
+                    <div class="lesson_pic text-center">
+                        <img src="./images/pic1.jpg" alt="" class="pic1">
+                    </div>
+                    <div class="lesson_desc mt10">
+                        <p>软件与手绘基础--就业班体系课程，随到随学逐一指导。</p>
+                        <p>开课时间：<span>2017-12-17</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="lesson pull-left mb10">
+                <a href="javascript:;">
+                    <div class="lesson_pic text-center">
+                        <img src="./images/pic1.jpg" alt="" class="pic1">
+                    </div>
+                    <div class="lesson_desc mt10">
+                        <p>软件与手绘基础--就业班体系课程，随到随学逐一指导。</p>
+                        <p>开课时间：<span>2017-12-17</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="lesson pull-left mb10">
+                <a href="javascript:;">
+                    <div class="lesson_pic text-center">
+                        <img src="./images/pic1.jpg" alt="" class="pic1">
+                    </div>
+                    <div class="lesson_desc mt10">
+                        <p>软件与手绘基础--就业班体系课程，随到随学逐一指导。</p>
+                        <p>开课时间：<span>2017-12-17</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="lesson pull-left mb10">
+                <a href="javascript:;">
+                    <div class="lesson_pic text-center">
+                        <img src="./images/pic1.jpg" alt="" class="pic1">
+                    </div>
+                    <div class="lesson_desc mt10">
+                        <p>软件与手绘基础--就业班体系课程，随到随学逐一指导。</p>
+                        <p>开课时间：<span>2017-12-17</span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- prepareLessonsEND-->
+    <!-- postLseeons -->
+    <div class="container mt40">
+        <h3 class="text-center mb50">往期课程</h3>
+        <div class="row plr0">
+            <div class="postLesson pull-left">
+                <a href="javascript:;">
+                    <div class="post_pic text-center">
+                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
+                    </div>
+                    <div class="post_desc">
+                        <div>创办学校的方案
+                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                        </div>
+                        <p>&nbsp;&nbsp;12345</p>
+                    </div>
+                </a>
+            </div>
+            <div class="postLesson pull-left">
+                <a href="javascript:;">
+                    <div class="post_pic text-center">
+                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
+                    </div>
+                    <div class="post_desc">
+                        <div>创办学校的方案
+                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                        </div>
+                        <p>&nbsp;&nbsp;12345</p>
+                    </div>
+                </a>
+            </div>
+            <div class="postLesson pull-left">
+                <a href="javascript:;">
+                    <div class="post_pic text-center">
+                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
+                    </div>
+                    <div class="post_desc">
+                        <div>创办学校的方案
+                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                        </div>
+                        <p>&nbsp;&nbsp;12345</p>
+                    </div>
+                </a>
+            </div>
+            <div class="postLesson pull-left">
+                <a href="javascript:;">
+                    <div class="post_pic text-center">
+                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
+                    </div>
+                    <div class="post_desc">
+                        <div>创办学校的方案
+                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                        </div>
+                        <p>&nbsp;&nbsp;12345</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- postLseeonsEND -->
+</body>
+
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./js/jquery-3.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/index.js"></script>

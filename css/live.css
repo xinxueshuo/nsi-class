@@ -1,0 +1,83 @@
+/* 顶部 */
+
+.container-fluid {
+    padding: 0;
+    height: 51px;
+    line-height: 51px;
+    background: #2c2c2c;
+}
+
+.glyphicon {
+    color: #FFF;
+}
+
+.nav>li>a {
+    color: #FFF;
+}
+
+.nav>li>a:hover {
+    color: #2c2c2c;
+}
+
+.active {
+    margin-right: 10px;
+}
+
+.navbar-toggle {
+    border: 1px solid #FFF;
+}
+
+.navbar-toggle>.icon-bar {
+    background: #FFF;
+}
+
+.navbar-nav {
+    margin: 0 -15px;
+}
+
+.navbar-collapse {
+    background: #2c2c2c;
+    border-top: 0;
+    position: relative;
+    z-index: 999;
+}
+
+.navbar {
+    border: none;
+}
+
+.liveBg {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: auto;
+}
+
+#player {
+    transition: all 1s;
+    padding-right: 0;
+}
+
+
+/* #plInstall {
+    float: right;
+} */
+
+.comment {
+    padding-left: 0;
+}
+
+.comment>img {
+    height: 490px;
+}
+
+@media(max-width:1600px)and (min-width:769px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width:768px) {
+    .glyphicon-th-list {
+        padding-left: 15px;
+    }
+}
