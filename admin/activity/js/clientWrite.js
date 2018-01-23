@@ -43,7 +43,8 @@ $(function() {
                 Deadline = $("#Deadline"),
                 activityTitle = $("#activityTitle"),
                 activityDescription = $("#activityDescription"),
-                activityPic = $("#activityPic")
+                activityPic = $("#activityPic"),
+                title = $("title")
                 // console.log(obj)
             Deadline.text(obj.Deadline)
             activityPic.append(obj.Title20)
@@ -56,7 +57,7 @@ $(function() {
             // $("#Title01").text(msg[0].Title01)
             activityTitle.text(aTitle[0])
             activityDescription.text(aTitle[1])
-
+            title.html("新学说-" + activityTitle.text())
             for (var i = 2; i < aTitle.length - 1; i++) {
                 subBox.before(`
                 <div class="form-group">
