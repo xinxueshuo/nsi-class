@@ -126,6 +126,8 @@ $(function() {
                 url: 'http://' + changeUrl.address + '/Class_activity?whereFrom=insert',
                 success: function(msg) {
                     console.log("success:提交表单成功" + msg)
+                    alert("提交成功")
+                    window.location.href = "http://www.xinxueshuo.cn/"
                 },
                 error: function(msg) {
                     console.log("error:提交表单失败" + msg)

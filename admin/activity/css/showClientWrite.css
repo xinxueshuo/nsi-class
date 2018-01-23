@@ -1,3 +1,26 @@
+body {
+    background-image: -webkit-linear-gradient(to bottom, #f7e8df, #c8edf9);
+    background-image: linear-gradient(to bottom, #f7e8df, #c8edf9)
+}
+
+th,
+td {
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+tr {
+    transition: all .3s;
+}
+
+tr:hover {
+    background: rgb(255, 230, 207);
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
 .content {
     padding: 30px 15px;
     position: relative;
@@ -5,30 +28,26 @@
 
 .activityList,
 .activityDesc {
-    border: 2px solid #FF8533;
     border-radius: 4px;
     overflow: hidden;
-    /* position: fixed; */
+    background: #FFF;
+    box-shadow: 0 0 10px #ccc;
 }
 
 .title {
     background-color: #FF8533;
     color: #FFF;
     margin: 0;
-    height: 35px;
-    line-height: 35px;
+    height: 45px;
+    line-height: 45px;
     padding-left: 20px;
     font-size: 16px;
 }
 
 .titleLogo {
-    font-size: 30px;
+    font-size: 26px;
     vertical-align: middle;
     margin-right: 10px;
-}
-
-.logo02 {
-    font-size: 26px;
 }
 
 .activityListDesc_container,
@@ -36,8 +55,41 @@
     background-color: #FFF;
 }
 
+.activityListDesc_container {
+    padding-left: 0;
+}
+
 .activityListDesc_container li {
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     cursor: pointer;
+    list-style: none;
+    padding-left: 20px;
+    transition: all .3s;
+    font-weight: 700;
+}
+
+.active {
+    background: #FF8533;
+    color: #FFF;
+}
+
+.activityListDesc_container li:hover {
+    background: rgb(255, 230, 207);
+}
+
+.table-responsive {
+    padding: 0 0 10px;
+    overflow-x: scroll;
+    border: 10px solid #FFF;
+}
+
+.activityDesc_container {
+    margin-bottom: 0;
+}
+
+@media(max-width:767px) {
+    .activityDesc {
+        margin-top: 10px;
+    }
 }
