@@ -76,11 +76,23 @@
         display: inline-block;
         height: auto;
         max-width: 100%;
-        /* height: auto; */
+        vertical-align: top;
     }
     
     .box_shadow {
         box-shadow: 0 0 10px #666;
+    }
+    
+    .clearfix:after {
+        content: '.';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    
+    .clearfix {
+        *zoom: 1;
     }
     
     @media (min-width: 1200px) {

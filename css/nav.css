@@ -10,7 +10,7 @@
 }
 
 .top {
-    background: #1d98de;
+    background: #225189;
     box-shadow: 0 4px 8px 0 rgba(7, 17, 27, .2);
 }
 
@@ -22,9 +22,11 @@
 
 .containerTop .logo {
     display: inline-block;
-    background: url("../images/logo.jpg");
+    background: url("../images/logo01.png") no-repeat;
+    background-size: 70% 83%;
     width: 170px;
     height: 50px;
+    background-position: 40px 5px;
 }
 
 .nav>li>a {
@@ -32,11 +34,11 @@
 }
 
 .nav>li {
-    background: #1d98de;
+    background: #225189;
 }
 
 .nav>li>a:hover {
-    color: #1d98de;
+    color: #225189;
     background: rgb(248, 246, 246);
 }
 

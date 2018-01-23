@@ -10,7 +10,7 @@
 }
 
 .top {
-    background: #1d98de;
+    background: #225189;
 }
 
 .containerTop {
@@ -21,9 +21,11 @@
 
 .containerTop .logo {
     display: inline-block;
-    background: url("../images/logo.jpg");
+    background: url("../images/logo01.png") no-repeat;
+    background-size: 70% 83%;
     width: 170px;
     height: 50px;
+    background-position: 40px 5px;
 }
 
 .nav>li>a {
@@ -31,11 +33,11 @@
 }
 
 .nav>li {
-    background: #1d98de;
+    background: #225189;
 }
 
 .nav>li>a:hover {
-    color: #1d98de;
+    color: #225189;
     background: rgb(248, 246, 246);
 }
 
@@ -78,18 +80,31 @@
 /* playVideo */
 
 .playVideo {
-    height: 400px;
-    background: #1d98de;
+    height: 450px;
+    background: #eee;
     position: relative;
     transition: all 1s;
+    position: relative;
 }
 
-.playVideo::before {
-    display: block;
+.playVideo_title {
     position: absolute;
-    content: "如何为学生提供安全的环境";
-    color: #FFF;
     top: 10px;
+    left: 20px;
+    color: #2b323c;
+    font-size: 20px;
+}
+
+.playVideo_desc {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(44, 50, 59, .65);
+    padding-left: 20px;
 }
 
 .playVideo>.enter {
@@ -97,7 +112,7 @@
     position: absolute;
     width: 140px;
     height: 60px;
-    background: #2c2c2c;
+    background: #2b323c;
     color: #FFF;
     border-radius: 30px;
     top: 50%;
@@ -106,6 +121,7 @@
     text-align: center;
     line-height: 60px;
     text-decoration: none;
+    transition: all .3s;
 }
 
 .playVideo>.enter:hover {
@@ -113,85 +129,65 @@
 }
 
 .description {
-    height: 400px;
-    background: #1d98de;
-    transition: all 1s;
-    padding-left: 0;
-    border-left: 15px solid #FFF;
+    height: 450px;
+    padding: 20px 0;
+    background-color: #eee;
 }
 
 .lists {
-    padding: 7px 7px 7px 22px;
+    width: 280px;
+    margin: 0 auto;
+    background-color: #FFF;
 }
 
-.lists>.list_desc {
-    height: 185px;
-    background: #2c2c2c;
-    transition: all 1s;
+.lists img {
+    width: 100%;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content>p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
     overflow: hidden;
+    color: #666;
 }
 
-.lists>.list_desc>h5 {
-    padding-top: 12px;
-    height: 30px;
-    color: #FFF;
-    overflow: hidden;
-    position: relative;
-    z-index: 999;
-    background: #2c2c2c;
-}
-
-.lists>.lecturer {
-    margin-bottom: 15px;
-}
-
-.scrollBox {
-    position: relative;
-    overflow: hidden;
-    /* height: 140px; */
-    z-index: 1;
-}
-
-.autoRoll {
-    height: 150px;
-    padding-top: 10px;
-}
-
-ul.autoRoll>li {
-    color: #FFF;
-    line-height: 50px;
+.content>p>span {
+    color: #999999;
 }
 
 
 /* 备课 */
 
-.prepareLessons {
-    /* padding: 40px 80px 20px; */
-    position: relative;
+.prepareLseeon {
+    height: 220px;
 }
 
-.lesson {
-    width: 22%;
-    margin-right: 40px;
+
+/* .prepareLseeon>p {
+    padding-left: 20px
+} */
+
+.prepareLesson_desc {
+    width: 280px;
+    height: 170px;
+    margin: 10px auto;
 }
 
-.lesson:last-of-type {
-    margin-right: 0;
-}
-
-.lesson>a {
-    display: block;
-    color: #000;
-}
-
-.lesson>a>p {
-    letter-spacing: 1px;
-    line-height: 20px;
-}
-
-.lesson>.pic1 {
-    display: inline-block;
-    vertical-align: top;
+.prepareLesson_title {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    background-color: rgba(44, 50, 59, .65);
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
 }
 
 
@@ -199,6 +195,11 @@ ul.autoRoll>li {
 
 .postLesson {
     margin-bottom: 10px;
+}
+
+.prepareLesson_desc {
+    height: 170px;
+    position: relative;
 }
 
 .star>span {
@@ -244,17 +245,38 @@ ul.autoRoll>li {
     .postLesson:last-of-type {
         margin-right: 0;
     }
+    .description {
+        width: 32%;
+        margin-left: 15px;
+    }
+    .prepareLseeon {
+        margin-left: 20px;
+    }
+    .prepareLseeon:first-of-type {
+        margin-left: 0;
+    }
 }
 
 @media (max-width:1190px) and (min-width:767px) {
-    .lesson {
-        width: 21%;
+    .prepareLseeon {
+        margin-bottom: 15px;
     }
+    .prepareLesson_intro {
+        padding: 0 100px;
+    }
+    .prepareLseeon,
     .postLesson {
         width: 50%;
     }
     .post_desc {
         padding: 0 100px;
+    }
+}
+
+@media(min-width:992px) {
+    .description {
+        width: 32%;
+        margin-left: 12px;
     }
 }
 
@@ -265,43 +287,28 @@ ul.autoRoll>li {
     .navbar-collapse {
         border-top: 1px solid transparent;
     }
-    ul.autoRoll>li {
-        line-height: 40px;
-    }
-    ul.autoRoll {
-        height: 200px;
-    }
     .lesson {
         width: 44%;
         padding: 0 54px;
     }
+    .prepareLesson_intro,
     .post_desc {
         padding: 0 48px;
+    }
+    .description {
+        margin-top: 15px;
     }
 }
 
 @media (max-width:768px) {
-    /* .in {
-        border-top: 1px solid #FFF;
-        border-bottom: 1px solid #FFF;
-    } */
     .logo {
         margin-left: 30px;
     }
     .playVideo {
-        height: 200px;
-    }
-    .description {
-        height: 200px;
+        height: 350px;
     }
     .lists>.list_desc {
         height: 85px;
-    }
-    ul.autoRoll>li {
-        line-height: 25px;
-    }
-    ul.autoRoll {
-        height: 75px;
     }
     .lesson {
         width: 43%;
@@ -314,52 +321,56 @@ ul.autoRoll>li {
     .post_desc {
         padding: 0
     }
+    .description {
+        margin-top: 15px;
+    }
+    .prepareLseeon {
+        width: 48%;
+        margin-top: 15px;
+    }
+    .prepareLesson_intro {
+        padding: 0 40px;
+    }
 }
 
 @media(max-width:589px) {
-    .lesson {
+    .prepareLseeon {
         width: 100%;
-    }
-    .lesson .lesson_desc {
-        padding: 0 112px;
     }
     .postLesson {
         width: 100%;
-        margin: 0
+        margin: 5px 0;
     }
     .post_desc {
         padding: 0 90px;
     }
+    .prepareLesson_intro {
+        padding: 0 65px;
+    }
 }
 
 @media (max-width:474px) {
-    ul.autoRoll>li {
-        line-height: 24px;
-    }
-    ul.autoRoll {
-        height: 148px;
-    }
-    .lesson .lesson_desc {
-        padding: 0 43px;
-    }
     .post_desc {
         padding: 0 70px;
     }
+    .prepareLesson_intro {
+        padding: 0 65px;
+    }
 }
 
-@media (max-width:474px) and (min-width:320px) {}
-
-@media (max-width:320px) {
-    ul.autoRoll>li {
-        line-height: 24px;
-    }
-    ul.autoRoll {
-        height: 195px;
-    }
-    .lesson .lesson_desc {
-        padding: 0;
+@media(max-width:375px) {
+    .post_desc,
+    .prepareLesson_intro {
+        padding: 0 47px;
     }
     .post_desc {
-        padding: 0
+        margin-top: 15px;
+    }
+}
+
+@media (max-width:320px) {
+    .post_desc,
+    .prepareLesson_intro {
+        padding: 0 20px
     }
 }
