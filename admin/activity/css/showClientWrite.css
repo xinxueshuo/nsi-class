@@ -86,10 +86,17 @@ tr:hover {
 
 .activityDesc_container {
     margin-bottom: 0;
+    border-right: 2px solid #ccc;
 }
 
 @media(max-width:767px) {
     .activityDesc {
         margin-top: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1400px;
     }
 }
