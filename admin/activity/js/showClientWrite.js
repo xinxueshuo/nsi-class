@@ -6,15 +6,14 @@ $(function() {
 
 $(function() {
     var activityList = $("#activityListDesc_container"),
-        activeTitleList = $("#activeTitle"),
-        defaultTitleLength = 0
+        activeTitleList = $("#activeTitle")
     $.ajax({
         type: "post",
         dataType: "json",
         url: 'http://' + changeUrl.address + '/Class_activity?whereFrom=searchActivity',
         success: function(msg) {
             var title = [],
-                theNewest = msg.data[0];
+                theNewest = msg.data[0]
             for (var i = 0; i < msg.data.length; i++) {
                 activityList.append('<li>' + msg.data[i].Title1 + '</li>')
             }
@@ -32,6 +31,7 @@ $(function() {
             aLi.on("click", function() {
                 var data = $(this).text(),
                     _index = $(this).index()
+                $(this).css({ "background": "rgb(253, 185, 140)", "color": "#FFF" }).siblings().css({ "background": "#FFF", "color": "#000" })
                 $.ajax({
                     type: "post",
                     dataType: "json",
@@ -50,33 +50,37 @@ $(function() {
                         for (var i = 0; i < arrTitle.length; i++) {
                             activeTitleList.append('<th>' + arrTitle[i] + '</th>')
                         }
-                        // console.log(arrTitle)
-                        defaultTitleLength = arrTitle.length;
-                    },
-                    error: function() {
-                        console.log("error")
-                    }
-                })
-                $.ajax({
-                    type: "post",
-                    dataType: "json",
-                    data: { "Title1": data },
-                    url: 'http://' + changeUrl.address + '/Class_activity?whereFrom=searchInformation',
-                    success: function(msg) {
-                        console.log(msg.data)
-                        var activeContent = $("#activeContent")
-                        activeContent.html("")
-                        for (var i = 0; i < msg.data.length; i++) {
-                            activeContent.append(`<tr></tr>`)
-                            for (var j = 0; j < defaultTitleLength; j++) {
-                                activeContent.children("tr").eq(i).append('<td>' + eval("msg.data[i].Content" + (j + 3)) + '</td>')
+                        $.ajax({
+                            type: "post",
+                            dataType: "json",
+                            data: { "Title1": data },
+                            url: 'http://' + changeUrl.address + '/Class_activity?whereFrom=searchInformation',
+                            success: function(msg) {
+                                // console.log(msg.data)
+                                var activeContent = $("#activeContent")
+                                activeContent.html("")
+                                for (var i = 0; i < msg.data.length; i++) {
+                                    activeContent.append('<tr></tr>')
+                                    for (var j = 0; j < arrTitle.length; j++) {
+                                        activeContent.children("tr").eq(i).append('<td>' + eval("msg.data[i].Content" + (j + 3)) + '</td>')
+                                    }
+                                }
+                                for (var i = 0; i < $("td").length; i++) {
+                                    if ($("td").eq(i).text() == "null") {
+                                        $("td").eq(i).text("未填写")
+                                    }
+                                }
+                            },
+                            error: function() {
+                                console.log("error")
                             }
-                        }
+                        })
                     },
                     error: function() {
                         console.log("error")
                     }
                 })
+
             })
 
             // 默认显示最新活动
@@ -92,32 +96,8 @@ $(function() {
                         activeContent.append(`<tr></tr>`)
                         for (var j = 0; j < title.length; j++) {
                             activeContent.children("tr").eq(i).append('<td>' + eval("msg.data[i].Content" + (j + 3)) + '</td>')
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content3}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content4}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content5}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content6}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content7}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content8}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content9}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content10}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content11}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content12}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content13}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content14}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content15}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content16}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content17}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content18}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content19}</td>`)
-                                // activeContent.children("tr").eq(i).append(`<td>${msg.data[i].Content20}</td>`)
                         }
                     }
-                    // console.log($("td").text())
-                    // for (var i = 0; i < $("td").length; i++) {
-                    //     if ($("td").eq(i).text() == "null") {
-                    //         $("td").eq(i).css("display", "none")
-                    //     }
-                    // }
                 },
                 error: function(msg) {
                     console.log("error")

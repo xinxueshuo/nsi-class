@@ -56,6 +56,7 @@ tr:hover {
 }
 
 .activityListDesc_container {
+    margin-top: 10px;
     padding-left: 0;
 }
 
@@ -74,8 +75,14 @@ tr:hover {
     color: #FFF;
 }
 
-.activityListDesc_container li:hover {
+
+/* .activityListDesc_container li:hover {
     background: rgb(255, 230, 207);
+} */
+
+.activityListDesc_container li:first-of-type {
+    background: rgb(253, 185, 140);
+    color: #FFF;
 }
 
 .table-responsive {
@@ -86,7 +93,7 @@ tr:hover {
 
 .activityDesc_container {
     margin-bottom: 0;
-    border-right: 2px solid #ccc;
+    /* border-right: 2px solid #ccc; */
 }
 
 @media(max-width:767px) {
