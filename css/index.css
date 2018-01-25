@@ -67,162 +67,86 @@
     position: relative;
     z-index: 10000;
     border-color: #1983bf;
-    /* -webkit-box-shadow: inset 0 1px 0 #71d0f8;
-    box-shadow: inset 0 1px 0 #71d0f8; */
 }
-
-
-/* .navbar-collapse {
-    border-top: 1px solid #FFF;
-} */
 
 
 /* playVideo */
 
 .playVideo {
-    height: 450px;
-    background: #eee;
     position: relative;
-    transition: all 1s;
-    position: relative;
+    background-color: lightgray;
+    overflow: hidden;
 }
 
 .playVideo_title {
     position: absolute;
-    top: 10px;
-    left: 20px;
-    color: #2b323c;
+    left: 15px;
+    top: 15px;
     font-size: 20px;
+    z-index: 99;
 }
 
-.playVideo_desc {
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    color: #FFF;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: rgba(44, 50, 59, .65);
-    padding-left: 20px;
-}
-
-.playVideo>.enter {
+.enterPlay {
     display: block;
     position: absolute;
-    width: 140px;
-    height: 60px;
-    background: #2b323c;
-    color: #FFF;
-    border-radius: 30px;
-    top: 50%;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(25, 25, 25, .7);
     left: 50%;
-    margin: -30px 0 0 -70px;
+    top: 50%;
+    margin: -25px 0 0 -50px;
+    color: #FFF;
+    line-height: 50px;
     text-align: center;
-    line-height: 60px;
-    text-decoration: none;
+    border-radius: 30px;
+    z-index: 99;
     transition: all .3s;
 }
 
-.playVideo>.enter:hover {
-    background: rgb(54, 53, 53);
+.enterPlay:hover {
+    color: #ddd;
+    background-color: rgba(25, 25, 25, .9)
 }
 
-.description {
-    height: 450px;
-    padding: 20px 0;
-    background-color: #eee;
-}
-
-.lists {
-    width: 280px;
-    margin: 0 auto;
-    background-color: #FFF;
-}
-
-.lists img {
-    width: 100%;
-}
-
-.content {
-    padding: 10px;
-}
-
-.content>p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    overflow: hidden;
-    color: #666;
-}
-
-.content>p>span {
-    color: #999999;
-}
-
-
-/* 备课 */
-
-.prepareLseeon {
-    height: 220px;
-}
-
-
-/* .prepareLseeon>p {
-    padding-left: 20px
-} */
-
-.prepareLesson_desc {
-    width: 280px;
-    height: 170px;
-    margin: 10px auto;
-}
-
-.prepareLesson_title {
+.playVideo_desc {
     position: absolute;
     width: 100%;
-    height: 30px;
-    line-height: 30px;
-    color: #FFF;
-    background-color: rgba(44, 50, 59, .65);
-    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(25, 25, 25, .7);
+    z-index: 99;
     left: 0;
-    padding-left: 20px;
+    bottom: 0;
+    color: #FFF;
+    padding-left: 15px;
+}
+
+.teacherDesc {
+    min-height: 350px;
+    background-color: lightgray;
 }
 
 
-/* 往期课程 */
+/* Course */
 
-.postLesson {
-    margin-bottom: 10px;
-}
-
-.prepareLesson_desc {
-    height: 170px;
+.Course {
     position: relative;
 }
 
-.star>span {
-    display: inline-block;
-    width: 19px;
-    height: 18px;
-    background: url("../images/star_full.jpg")
+.Course img {
+    width: 100%;
 }
 
-.star>span:last-of-type {
-    background: url("../images/star.jpg")
-}
-
-.post_desc>p::before {
-    display: inline-block;
-    width: 25px;
-    height: 11px;
-    content: "";
-    background: url("../images/read.jpg")
-}
-
-.post_pic {
-    margin-bottom: 10px;
+.Couse_title {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(25, 25, 25, .7);
+    left: 0;
+    bottom: 0;
+    color: #FFF;
+    padding-left: 15px;
 }
 
 
@@ -235,49 +159,6 @@
     .navbar-collapse {
         border-top: 1px solid transparent;
     }
-    .lesson_desc {
-        padding: 0 22px;
-    }
-    /* 往期课程 */
-    .postLesson {
-        margin-right: 20px;
-    }
-    .postLesson:last-of-type {
-        margin-right: 0;
-    }
-    .description {
-        width: 32%;
-        margin-left: 15px;
-    }
-    .prepareLseeon {
-        margin-left: 20px;
-    }
-    .prepareLseeon:first-of-type {
-        margin-left: 0;
-    }
-}
-
-@media (max-width:1190px) and (min-width:767px) {
-    .prepareLseeon {
-        margin-bottom: 15px;
-    }
-    .prepareLesson_intro {
-        padding: 0 100px;
-    }
-    .prepareLseeon,
-    .postLesson {
-        width: 50%;
-    }
-    .post_desc {
-        padding: 0 100px;
-    }
-}
-
-@media(min-width:992px) {
-    .description {
-        width: 32%;
-        margin-left: 12px;
-    }
 }
 
 @media (max-width:992px) and (min-width:767px) {
@@ -287,90 +168,10 @@
     .navbar-collapse {
         border-top: 1px solid transparent;
     }
-    .lesson {
-        width: 44%;
-        padding: 0 54px;
-    }
-    .prepareLesson_intro,
-    .post_desc {
-        padding: 0 48px;
-    }
-    .description {
-        margin-top: 15px;
-    }
 }
 
 @media (max-width:768px) {
     .logo {
         margin-left: 30px;
-    }
-    .playVideo {
-        height: 350px;
-    }
-    .lists>.list_desc {
-        height: 85px;
-    }
-    .lesson {
-        width: 43%;
-        padding: 0 53px;
-    }
-    .postLesson {
-        width: 35%;
-        margin: 0 38px;
-    }
-    .post_desc {
-        padding: 0
-    }
-    .description {
-        margin-top: 15px;
-    }
-    .prepareLseeon {
-        width: 48%;
-        margin-top: 15px;
-    }
-    .prepareLesson_intro {
-        padding: 0 40px;
-    }
-}
-
-@media(max-width:589px) {
-    .prepareLseeon {
-        width: 100%;
-    }
-    .postLesson {
-        width: 100%;
-        margin: 5px 0;
-    }
-    .post_desc {
-        padding: 0 90px;
-    }
-    .prepareLesson_intro {
-        padding: 0 65px;
-    }
-}
-
-@media (max-width:474px) {
-    .post_desc {
-        padding: 0 70px;
-    }
-    .prepareLesson_intro {
-        padding: 0 65px;
-    }
-}
-
-@media(max-width:375px) {
-    .post_desc,
-    .prepareLesson_intro {
-        padding: 0 47px;
-    }
-    .post_desc {
-        margin-top: 15px;
-    }
-}
-
-@media (max-width:320px) {
-    .post_desc,
-    .prepareLesson_intro {
-        padding: 0 20px
     }
 }
