@@ -66,6 +66,14 @@
         margin: 5px 0
     }
     
+    .ptb30lr15 {
+        padding: 30px 15px
+    }
+    
+    .ptb50lr15 {
+        padding: 50px 15px
+    }
+    
     .plr0 {
         padding-left: 0;
         padding-right: 0;
@@ -110,6 +118,22 @@
     .borderRadio4 {
         border-radius: 4px;
         overflow: hidden;
+    }
+    
+    .bgfff {
+        background-color: #FFF !important;
+        box-shadow: 0 2px 8px 0 rgba(7, 17, 27, .06);
+        position: relative;
+        z-index: 99
+    }
+    
+    .bg000 {
+        background-color: #f8fafc;
+        box-shadow: 0 2px 4px 0 rgba(7, 17, 27, .06);
+    }
+    
+    .letterspacing1 {
+        letter-spacing: 1px;
     }
     
     @media (min-width: 1200px) {
