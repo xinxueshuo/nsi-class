@@ -1,0 +1,133 @@
+body {
+    background-image: -webkit-linear-gradient(to bottom, #f7e8df, #c8edf9);
+    background-image: linear-gradient(to bottom, #f7e8df, #c8edf9)
+}
+
+th,
+td {
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+tr {
+    transition: all .3s;
+}
+
+tr:hover {
+    background: rgb(255, 230, 207);
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.content {
+    padding: 30px 15px;
+    position: relative;
+}
+
+.activityList,
+.activityDesc {
+    border-radius: 4px;
+    overflow: hidden;
+    background: #FFF;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.title {
+    background-color: #FF8533;
+    color: #FFF;
+    margin: 0;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+    font-size: 16px;
+    position: relative;
+}
+
+.addNewActive {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 10px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.addNewActive:link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.addNewActive:visited {
+    color: #FFF;
+}
+
+.addNewActive:hover {
+    text-decoration: none;
+    color: rgb(185, 182, 182)
+}
+
+.titleLogo {
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.activityListDesc_container,
+.activityDesc_container {
+    background-color: #FFF;
+}
+
+.activityListDesc_container {
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.activityListDesc_container li {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    list-style: none;
+    padding-left: 20px;
+    transition: all .3s;
+    font-weight: 700;
+}
+
+.active {
+    background: #FF8533;
+    color: #FFF;
+}
+
+
+/* .activityListDesc_container li:hover {
+    background: rgb(255, 230, 207);
+} */
+
+.activityListDesc_container li:first-of-type {
+    background: rgb(253, 185, 140);
+    color: #FFF;
+}
+
+.table-responsive {
+    padding: 0 0 10px;
+    overflow-x: scroll;
+    border: 10px solid #FFF;
+}
+
+.activityDesc_container {
+    margin-bottom: 0;
+    /* border-right: 2px solid #ccc; */
+}
+
+@media(max-width:767px) {
+    .activityDesc {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1400px;
+    }
+}

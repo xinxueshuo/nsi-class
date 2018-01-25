@@ -1,0 +1,16 @@
+label {
+    display: block;
+}
+
+label {
+    font-weight: normal;
+}
+
+.Title {
+    font-weight: 700;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    vertical-align: top;
+}

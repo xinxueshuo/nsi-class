@@ -8,15 +8,20 @@ body {
     margin-top: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .activeTitle {
-    height: 50px;
+    /* height: 50px; */
     line-height: 50px;
     background: #FF8533;
 }
 
 .top {
     max-width: 770px;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 .activeTitle_logo {
@@ -50,7 +55,7 @@ body {
 }
 
 form {
-    padding: 0 50px;
+    padding: 0 30px;
 }
 
 .Title {

@@ -43,7 +43,8 @@ $(function() {
                 Deadline = $("#Deadline"),
                 activityTitle = $("#activityTitle"),
                 activityDescription = $("#activityDescription"),
-                activityPic = $("#activityPic")
+                activityPic = $("#activityPic"),
+                title = $("title")
                 // console.log(obj)
             Deadline.text(obj.Deadline)
             activityPic.append(obj.Title20)
@@ -56,7 +57,7 @@ $(function() {
             // $("#Title01").text(msg[0].Title01)
             activityTitle.text(aTitle[0])
             activityDescription.text(aTitle[1])
-
+            title.html("新学说-" + activityTitle.text())
             for (var i = 2; i < aTitle.length - 1; i++) {
                 subBox.before(`
                 <div class="form-group">
@@ -107,7 +108,7 @@ $(function() {
         if (aInput.eq(0).val() == "") {
             alert("请填写第一项内容")
         } else {
-            for (var i = 2; i < aInput.length; i++) {
+            for (var i = 2; i < aInput.length + 2; i++) {
                 sendData["Content" + (i + 1)] = addEmpty($("#Title_input" + i).val());
                 sendData["Title" + (i + 1)] = $("#Title" + i).text();
                 sendData["Deadline"] = $("#Deadline").text();
@@ -125,6 +126,8 @@ $(function() {
                 url: 'http://' + changeUrl.address + '/Class_activity?whereFrom=insert',
                 success: function(msg) {
                     console.log("success:提交表单成功" + msg)
+                    alert("提交成功!将跳转至官网")
+                    window.location.href = "http://www.xinxueshuo.cn/"
                 },
                 error: function(msg) {
                     console.log("error:提交表单失败" + msg)
