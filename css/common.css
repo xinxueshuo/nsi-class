@@ -34,6 +34,10 @@
         margin-top: 10px;
     }
     
+    .mt15 {
+        margin-top: 15px;
+    }
+    
     .mt20 {
         margin-top: 20px;
     }
@@ -134,6 +138,20 @@
     
     .letterspacing1 {
         letter-spacing: 1px;
+    }
+    
+    .oneline {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .multiline {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
     }
     
     @media (min-width: 1200px) {

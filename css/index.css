@@ -122,9 +122,36 @@
     padding-left: 15px;
 }
 
+.teacherBox {
+    padding: 15px;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 4px;
+}
+
 .teacherDesc {
     min-height: 430px;
-    background-color: lightgray;
+    background-color: #f8f8f8;
+    padding: 11px 15px;
+}
+
+.teacherPic {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.teacherContent>span {
+    color: #666;
+}
+
+.multiline3 {
+    -webkit-line-clamp: 3;
+}
+
+.multiline4 {
+    -webkit-line-clamp: 4;
 }
 
 
@@ -191,5 +218,20 @@
 @media (max-width:415px) {
     .teacherDesc {
         min-height: 190px;
+    }
+}
+
+@media (min-width:1200px) {
+    .teacherBox {
+        margin-top: 27px;
+    }
+}
+
+@media (max-width:1200px) and (min-width:992px) {
+    .multiline {
+        -webkit-line-clamp: 3;
+    }
+    .teacherDesc {
+        min-height: 346px;
     }
 }
