@@ -100,7 +100,6 @@
         display: inline-block;
         height: auto;
         max-width: 100%;
-        vertical-align: top;
     }
     
     .box_shadow {
@@ -152,6 +151,11 @@
         display: -webkit-box;
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
+    }
+    
+    .textShadow {
+        color: #FFF;
+        text-shadow: 0 4px 8px rgba(7, 17, 27, 0.4);
     }
     
     @media (min-width: 1200px) {
