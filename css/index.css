@@ -302,12 +302,40 @@
 .Course img {
     width: 100%;
     transition: all .5s;
+    border-radius: 8px;
 }
 
 .CourseContainer {
     position: relative;
     transform-style: preserve-3d;
     perspective: 800px;
+}
+
+.new {
+    position: absolute;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    top: -8px;
+    left: -8px;
+    z-index: 4;
+    font-size: 16px;
+    color: #FFF;
+    line-height: 20px;
+    padding: 0 8px;
+    background: linear-gradient(-90deg, #f68688 0, #f02930 100%);
+}
+
+.makepreparations {
+    position: absolute;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    top: -8px;
+    left: -8px;
+    z-index: 4;
+    font-size: 14px;
+    color: #FFF;
+    padding: 2px 8px;
+    background: linear-gradient(-90deg, #f6eb86 0, #f0aa29 100%);
 }
 
 .Course-up {

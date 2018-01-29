@@ -48,40 +48,40 @@ $(function() {
 })
 
 
-$(function() {
-    var CourseContainer = $("#CourseContainer")
-    $.ajax({
-        type: "get",
-        async: false,
-        data: "",
-        dataType : "json",
-        contentType: "application/json;charset=UTF-8",
-        url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Search_Course',
-        success: function(msg) {
-            console.log(msg.data)
-            for (var i = 0; i < 4; i++) {
-                CourseContainer.append(`
-                    <div class="col-md-3 col-sm-6">
-                        <div class="CourseContainer">
-                            <a href="./detailLesson.html" target="_">
-                                <div class="Course borderRadio4 Course-up">
-                                    <img src="${msg.data[i].CoverImage}" alt="">
-                                </div>
-                                <div class="Course borderRadio4 Course-mid"><img src="${msg.data[i].CoverImage}" alt=""></div>
-                                <div class="Course borderRadio4 Course-down"><img src="${msg.data[i].CoverImage}" alt=""></div>
-                            </a>
-                            <div class="CourseInfo">
-                                <p class="mtb5 oneline"><span class="CourseName">${msg.data[i].CourseName}</span></p>
-                                <p class="mtb5 twoline"><span class="CourseDesc" title="${msg.data[i].CourseDescription}">${msg.data[i].CourseDescription}</span></p>
-                                <p class="mtb5">开课时间：<span class="CourseTime">${msg.data[i].ClassBegins}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                `)
-            }
-        },
-        error: function(msg) {
-            console.log("error:" + msg)
-        }
-    })
-})
+// $(function() {
+//     var CourseContainer = $("#CourseContainer")
+//     $.ajax({
+//         type: "get",
+//         async: false,
+//         data: "",
+//         dataType : "json",
+//         contentType: "application/json;charset=UTF-8",
+//         url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Search_Course',
+//         success: function(msg) {
+//             console.log(msg.data)
+//             for (var i = 0; i < 4; i++) {
+//                 CourseContainer.append(`
+//                     <div class="col-md-3 col-sm-6">
+//                         <div class="CourseContainer">
+//                             <a href="./detailLesson.html" target="_">
+//                                 <div class="Course borderRadio4 Course-up">
+//                                     <img src="${msg.data[i].CoverImage}" alt="">
+//                                 </div>
+//                                 <div class="Course borderRadio4 Course-mid"><img src="${msg.data[i].CoverImage}" alt=""></div>
+//                                 <div class="Course borderRadio4 Course-down"><img src="${msg.data[i].CoverImage}" alt=""></div>
+//                             </a>
+//                             <div class="CourseInfo">
+//                                 <p class="mtb5 oneline"><span class="CourseName">${msg.data[i].CourseName}</span></p>
+//                                 <p class="mtb5 twoline"><span class="CourseDesc" title="${msg.data[i].CourseDescription}">${msg.data[i].CourseDescription}</span></p>
+//                                 <p class="mtb5">开课时间：<span class="CourseTime">${msg.data[i].ClassBegins}</span></p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 `)
+//             }
+//         },
+//         error: function(msg) {
+//             console.log("error:" + msg)
+//         }
+//     })
+// })
