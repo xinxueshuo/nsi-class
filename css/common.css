@@ -34,8 +34,16 @@
         margin-top: 10px;
     }
     
+    .mt15 {
+        margin-top: 15px;
+    }
+    
     .mt20 {
         margin-top: 20px;
+    }
+    
+    .mt30 {
+        margin-top: 30px;
     }
     
     .mt40 {
@@ -50,8 +58,24 @@
         margin-bottom: 10px;
     }
     
+    .mb30 {
+        margin-bottom: 30px;
+    }
+    
     .mb50 {
         margin-bottom: 50px
+    }
+    
+    .mtb5 {
+        margin: 5px 0
+    }
+    
+    .ptb30lr15 {
+        padding: 30px 15px
+    }
+    
+    .ptb50lr15 {
+        padding: 50px 15px
     }
     
     .plr0 {
@@ -76,7 +100,6 @@
         display: inline-block;
         height: auto;
         max-width: 100%;
-        vertical-align: top;
     }
     
     .box_shadow {
@@ -93,6 +116,46 @@
     
     .clearfix {
         *zoom: 1;
+    }
+    
+    .borderRadio4 {
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .bgfff {
+        background-color: #FFF !important;
+        box-shadow: 0 2px 8px 0 rgba(7, 17, 27, .06);
+        position: relative;
+        z-index: 99
+    }
+    
+    .bg000 {
+        background-color: #f8fafc;
+        box-shadow: 0 2px 4px 0 rgba(7, 17, 27, .06);
+    }
+    
+    .letterspacing1 {
+        letter-spacing: 1px;
+    }
+    
+    .oneline {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .multiline {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    
+    .textShadow {
+        color: #FFF;
+        text-shadow: 0 4px 8px rgba(7, 17, 27, 0.4);
     }
     
     @media (min-width: 1200px) {

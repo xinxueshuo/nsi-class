@@ -67,162 +67,404 @@
     position: relative;
     z-index: 10000;
     border-color: #1983bf;
-    /* -webkit-box-shadow: inset 0 1px 0 #71d0f8;
-    box-shadow: inset 0 1px 0 #71d0f8; */
 }
-
-
-/* .navbar-collapse {
-    border-top: 1px solid #FFF;
-} */
 
 
 /* playVideo */
 
 .playVideo {
-    height: 450px;
-    background: #eee;
     position: relative;
-    transition: all 1s;
-    position: relative;
+    background-color: lightgray;
+    overflow: hidden;
 }
 
 .playVideo_title {
     position: absolute;
-    top: 10px;
-    left: 20px;
-    color: #2b323c;
+    width: 100%;
     font-size: 20px;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 15px;
+    color: #FFF;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(7, 17, 27, 0.5);
+    background-image: linear-gradient(-180deg, rgba(7, 17, 27, 0.6) 0%, rgba(7, 17, 27, 0) 97%);
+}
+
+.enterPlay {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    /* background-color: rgba(25, 25, 25, .7); */
+    left: 50%;
+    top: 50%;
+    margin: -25px 0 0 -50px;
+    color: #FFF;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 30px;
+    z-index: 99;
+    /* letter-spacing: 1px; */
+    transition: all .3s;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+.enterPlay>span {
+    display: inline-block;
+    font-size: 80px;
+    color: orange;
+    opacity: .9;
+    transition: all .3s;
+    position: relative;
+    animation: autoBig 2s infinite ease-in-out;
+}
+
+.enterPlay>span:hover {
+    opacity: 1;
 }
 
 .playVideo_desc {
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    color: #FFF;
     position: absolute;
-    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
     left: 0;
-    background: rgba(44, 50, 59, .65);
-    padding-left: 20px;
-}
-
-.playVideo>.enter {
-    display: block;
-    position: absolute;
-    width: 140px;
-    height: 60px;
-    background: #2b323c;
-    color: #FFF;
-    border-radius: 30px;
-    top: 50%;
-    left: 50%;
-    margin: -30px 0 0 -70px;
-    text-align: center;
-    line-height: 60px;
-    text-decoration: none;
-    transition: all .3s;
-}
-
-.playVideo>.enter:hover {
-    background: rgb(54, 53, 53);
-}
-
-.description {
-    height: 450px;
-    padding: 20px 0;
-    background-color: #eee;
-}
-
-.lists {
-    width: 280px;
-    margin: 0 auto;
-    background-color: #FFF;
-}
-
-.lists img {
-    width: 100%;
-}
-
-.content {
-    padding: 10px;
-}
-
-.content>p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    overflow: hidden;
-    color: #666;
-}
-
-.content>p>span {
-    color: #999999;
-}
-
-
-/* 备课 */
-
-.prepareLseeon {
-    height: 220px;
-}
-
-
-/* .prepareLseeon>p {
-    padding-left: 20px
-} */
-
-.prepareLesson_desc {
-    width: 280px;
-    height: 170px;
-    margin: 10px auto;
-}
-
-.prepareLesson_title {
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    color: #FFF;
-    background-color: rgba(44, 50, 59, .65);
     bottom: 0;
+    color: #FFF;
+    padding-left: 15px;
+    font-weight: 700;
+    text-shadow: 0 4px 8px rgba(7, 17, 27, 0.4);
+    font-family: "PingFang SC", "微软雅黑", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+    background-image: linear-gradient(-180deg, rgba(7, 17, 27, 0) 0%, rgba(7, 17, 27, 0.6) 97%);
+}
+
+.teacherBox {
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 999;
+}
+
+.bg-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
     left: 0;
-    padding-left: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 9;
 }
 
-
-/* 往期课程 */
-
-.postLesson {
-    margin-bottom: 10px;
+.circle-bg-top {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: url("../images/homochromyBg/circle.png") no-repeat;
+    background-size: 100%;
+    z-index: 2;
+    top: -165px;
+    left: -40px;
+    opacity: .6;
 }
 
-.prepareLesson_desc {
-    height: 170px;
+.oval-bg {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: url("../images/homochromyBg/oval.png") no-repeat;
+    background-size: 100%;
+    z-index: 1;
+    top: 40px;
+    left: -40px;
+    opacity: .6;
+    animation: autoRotate 60s infinite linear;
+}
+
+.diamond-bg-bottom {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: url("../images/homochromyBg/diamond.png") no-repeat;
+    background-size: 100%;
+    z-index: 2;
+    bottom: -126px;
+    left: -130px;
+    opacity: .6;
+    transform: rotate(0deg);
+    animation: autoRotate 60s infinite linear;
+}
+
+.triangle-bg {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: url("../images/homochromyBg/triangle.png") no-repeat;
+    background-size: 100%;
+    z-index: 3;
+    opacity: .6;
+    top: 190px;
+    right: -128px;
+    transform-origin: center;
+    animation: autoRotate 60s infinite linear;
+    animation-direction: reverse;
+}
+
+.teacherDesc {
+    min-height: 430px;
+    /* background-color: #f8f8f8; */
+    padding: 11px 15px;
     position: relative;
 }
 
-.star>span {
+.teacherPic {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(7, 17, 27, 0.4);
+    position: relative;
+}
+
+.champion {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("../images/champion.png") no-repeat;
+    ;
+    position: absolute;
+    left: 75px;
+    top: 0;
+}
+
+.multiline3 {
+    -webkit-line-clamp: 3;
+}
+
+.multiline4 {
+    -webkit-line-clamp: 4;
+}
+
+
+/* Course */
+
+.types-title {
+    font-weight: 700;
+    color: #4D555D;
+}
+
+.Course {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, .05);
+    transition: all .3s;
+}
+
+.Course:hover {
+    box-shadow: 0 8px 16px 0 rgba(7, 17, 27, .1);
+}
+
+.CourseInfo {
+    padding: 5px 8px;
+    font-family: "PingFang SC", "微软雅黑", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+}
+
+.CourseInfo p:nth-child(2) {
+    color: #93999F;
+}
+
+.CourseName {
+    font-size: 16px;
+    font-weight: 400;
+    color: #07111B;
+    transition: all .3s;
+}
+
+.CourseContainer:hover .CourseName {
+    color: red;
+}
+
+.Course img {
+    width: 100%;
+    transition: all .5s;
+}
+
+.CourseContainer {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.Course-up {
+    top: -12px;
+    z-index: 3;
+}
+
+.Course-mid {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    opacity: .4;
+    z-index: 2;
+    transition: all .3s;
+    transform: translateZ(-20px)
+}
+
+.Course-down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .2;
+    z-index: 2;
+    transition: all .3s;
+    transform: translateZ(-40px)
+}
+
+.CourseContainer:hover .Course-up {
+    top: -28px;
+}
+
+.CourseContainer:hover .Course-mid {
+    top: -14px;
+    transform: translateZ(-40px)
+}
+
+.CourseContainer:hover .Course-down {
+    transform: translateZ(-80px)
+}
+
+
+/* .Course:hover img {
+    transform: scale(1.1)
+} */
+
+.Couse_title {
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+    color: #FFF;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.Couse_subject {
     display: inline-block;
-    width: 19px;
-    height: 18px;
-    background: url("../images/star_full.jpg")
+    background-color: rgba(7, 17, 27, .4);
+    padding: 3px 12px;
+    border-radius: 12px;
 }
 
-.star>span:last-of-type {
-    background: url("../images/star.jpg")
+
+/* footer */
+
+.footer {
+    padding: 36px 15px;
 }
 
-.post_desc>p::before {
+.footer-link>a {
+    margin: 0 10px;
+    color: #99a1a6;
+}
+
+.footer-link>a:hover {
+    color: #07111B;
+}
+
+.weChat {
+    font-size: 30px;
+    color: #99a1a6;
+    opacity: .5;
     display: inline-block;
-    width: 25px;
-    height: 11px;
-    content: "";
-    background: url("../images/read.jpg")
+    position: relative;
 }
 
-.post_pic {
-    margin-bottom: 10px;
+.weChat>i {
+    position: absolute;
+    width: 172px;
+    height: 212px;
+    background: url("../images/weChat.png");
+    opacity: 1;
+    top: -215px;
+    left: -70px;
+    display: none;
+}
+
+.weChat:hover .weChat-pic {
+    display: block;
+}
+
+.weChat-desc {
+    font-size: 12px;
+    color: #4D555D;
+    line-height: 24px;
+}
+
+.weChat:hover {
+    color: #99a1a6;
+    opacity: 1;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #93999F;
+    font-family: "PingFang SC", "微软雅黑", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+    padding-left: 10px;
+    line-height: 60px;
+}
+
+.theThreePartLink {
+    display: inline-block;
+    margin: -5px 15px 0;
+}
+
+.theThreePartLink:nth-of-type(2) {
+    position: relative;
+    top: -2px;
+}
+
+
+/* 回到顶部 */
+
+.backtoTop {
+    position: fixed;
+    bottom: 80px;
+    right: 35px;
+    z-index: 999;
+    border-radius: 50%;
+    display: none;
+}
+
+.toTop {
+    font-size: 40px;
+    color: rgb(201, 214, 222);
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 43px;
+    box-shadow: rgba(15, 37, 64, 0.1) 0px 5px 15px 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    transition: bottom 0.3s ease 0s;
+    text-align: center;
+}
+
+.toTop:link {
+    color: rgb(201, 214, 222);
+}
+
+.toTop:hover {
+    color: #99a1a6
+}
+
+.toTop>span {
+    font-size: 24px;
 }
 
 
@@ -235,142 +477,137 @@
     .navbar-collapse {
         border-top: 1px solid transparent;
     }
-    .lesson_desc {
-        padding: 0 22px;
-    }
-    /* 往期课程 */
-    .postLesson {
-        margin-right: 20px;
-    }
-    .postLesson:last-of-type {
-        margin-right: 0;
-    }
-    .description {
-        width: 32%;
-        margin-left: 15px;
-    }
-    .prepareLseeon {
-        margin-left: 20px;
-    }
-    .prepareLseeon:first-of-type {
-        margin-left: 0;
-    }
-}
-
-@media (max-width:1190px) and (min-width:767px) {
-    .prepareLseeon {
-        margin-bottom: 15px;
-    }
-    .prepareLesson_intro {
-        padding: 0 100px;
-    }
-    .prepareLseeon,
-    .postLesson {
-        width: 50%;
-    }
-    .post_desc {
-        padding: 0 100px;
-    }
-}
-
-@media(min-width:992px) {
-    .description {
-        width: 32%;
-        margin-left: 12px;
-    }
 }
 
 @media (max-width:992px) and (min-width:767px) {
-    .logo {
-        margin-left: 30px;
-    }
     .navbar-collapse {
         border-top: 1px solid transparent;
     }
-    .lesson {
-        width: 44%;
-        padding: 0 54px;
-    }
-    .prepareLesson_intro,
-    .post_desc {
-        padding: 0 48px;
-    }
-    .description {
+}
+
+@media (max-width:769px) {
+    .teacherDesc {
         margin-top: 15px;
     }
-}
-
-@media (max-width:768px) {
-    .logo {
-        margin-left: 30px;
+    .theThreePartLink {
+        margin: -5px 5px 0;
     }
-    .playVideo {
-        height: 350px;
-    }
-    .lists>.list_desc {
-        height: 85px;
-    }
-    .lesson {
-        width: 43%;
-        padding: 0 53px;
-    }
-    .postLesson {
-        width: 35%;
-        margin: 0 38px;
-    }
-    .post_desc {
-        padding: 0
-    }
-    .description {
-        margin-top: 15px;
-    }
-    .prepareLseeon {
-        width: 48%;
-        margin-top: 15px;
-    }
-    .prepareLesson_intro {
-        padding: 0 40px;
+    .champion {
+        left: 300px;
     }
 }
 
-@media(max-width:589px) {
-    .prepareLseeon {
-        width: 100%;
+
+/* 教师简介-侧边栏 */
+
+@media(max-width:1024px) {
+    .teacherDesc {
+        min-height: 344px;
     }
-    .postLesson {
-        width: 100%;
-        margin: 5px 0;
-    }
-    .post_desc {
-        padding: 0 90px;
-    }
-    .prepareLesson_intro {
-        padding: 0 65px;
+    .champion {
+        left: 48px;
     }
 }
 
-@media (max-width:474px) {
-    .post_desc {
-        padding: 0 70px;
+@media (max-width:769px) {
+    .champion {
+        left: 300px;
     }
-    .prepareLesson_intro {
-        padding: 0 65px;
+    .ptb30lr15 {
+        padding: 15px;
     }
-}
-
-@media(max-width:375px) {
-    .post_desc,
-    .prepareLesson_intro {
-        padding: 0 47px;
-    }
-    .post_desc {
-        margin-top: 15px;
+    .CourseContainer {
+        margin-bottom: 15px;
     }
 }
 
-@media (max-width:320px) {
-    .post_desc,
-    .prepareLesson_intro {
-        padding: 0 20px
+@media (max-width:415px) {
+    .teacherDesc {
+        min-height: 190px;
     }
+    .playVideo_title {
+        line-height: 40px;
+    }
+    .footer-link,
+    .footer-copyright {
+        text-align: center;
+    }
+    .theThreePartLink {
+        margin: -5px 30px 0;
+    }
+    .champion {
+        left: 133px;
+    }
+    .enterPlay>span {
+        font-size: 60px;
+    }
+}
+
+@media (max-width:376px) {
+    .champion {
+        left: 112px;
+    }
+}
+
+@media (max-width:321px) {
+    .champion {
+        left: 85px;
+    }
+}
+
+@media (min-width:1200px) {
+    .teacherBox {
+        margin-top: 27px;
+    }
+}
+
+@media (max-width:1200px) and (min-width:992px) {
+    .multiline {
+        -webkit-line-clamp: 3;
+    }
+    .teacherDesc {
+        min-height: 346px;
+    }
+}
+
+@keyframes autoRotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes autoBig {
+    0% {
+        transform: translateZ(0)
+    }
+    20% {
+        transform: translateZ(50px);
+    }
+    40% {
+        transform: translateZ(0);
+    }
+    60% {
+        transform: translateZ(50px);
+    }
+    75% {
+        transform: translateZ(0)
+    }
+    100% {
+        transform: translateZ(0)
+    }
+}
+
+.swiper-button-next {
+    right: 30px;
+}
+
+.swiper-button-prev {
+    left: 30px;
+}
+
+.swiper-pagination-bullet {
+    background: #FFF;
 }

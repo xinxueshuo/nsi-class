@@ -8,6 +8,9 @@
     <title>新学说</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_ujd5teog3n9oogvi.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -41,7 +44,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="#">首页</a></li>
-                        <li class="active"><a href="./live.html">正在直播<span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="./testLivePC.html">正在直播<span class="sr-only">(current)</span></a></li>
                         <li><a href="./userCenter.html">课程中心</a></li>
                         <li><a href="#">讲师中心</a></li>
                     </ul>
@@ -59,175 +62,339 @@
     </div>
     <!-- 顶部END -->
     <!-- banner -->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="./images/banner03.jpg" alt="...">
-                <div class="carousel-caption"> </div>
-            </div>
-            <div class="item">
-                <img src="./images/banner03.jpg" alt="...">
-                <div class="carousel-caption">
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/banner03.jpg" alt="...">
-                <div class="carousel-caption">
-                </div>
-            </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/banner03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/banner1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/banner.jpg" alt=""></div>
         </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
     </div>
     <!-- bannerEND -->
-    <!--video&list-->
-    <div class="container mt10">
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 playVideo">
-                <a href="./live.html" class="enter">点击进入</a>
-                <div class="playVideo_desc">本节课堂时间：2018-1月1日 1：30 — 2：30</div>
-                <span class="playVideo_title">国际学校HR角色定位与挑战</span>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 description">
-                <div class="row lists">
-                    <img src="./images/playVideo_pic01.jpg" alt="">
-                    <div class="content">
-                        <h4 class="mb10">[TED]当死亡降临</h4>
-                        <p><span>讲师：</span>Lucy Kalanithi</p>
-                        <p><span>授课语言：</span>英文</p>
-                        <p><span>类型：</span>心理社会 TED 演讲 医学 TED全网首播 网易公开课</p>
-                        <p class="mt10"><span>课程简介：</span>在这个感人至深的演讲中，Lucy Kalanithi女士通过讲述其已过世丈夫的故事，告诉大家生命和死亡，爱与逝去，都是我们要经历的。当死亡降临，不可避免时，直面它，并不意味着我们的生活会因此凋零，生活是可以继续繁盛扩张。</p>
+    <div class="container-fluid">
+        <!--playVideo-->
+        <div class="bgfff">
+            <div class="container ptb30lr15">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="playVideo borderRadio4">
+                            <img src="./images/playVideo.jpg" alt="" class="playImg">
+                            <div id="" class="playVideo_title oneline">国际学校组织架构搭建及人员编制预算</div>
+                            <a href="./testLivePC.html" class="enterPlay" target="_"><span class="iconfont icon-boshiweb_bofangliang"></span></a>
+                            <p class="playVideo_desc">本节课堂时间：2018年01月01日 1：30 - 2：30</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="teacherDesc borderRadio4">
+                            <div class="teacherBox">
+                                <div class="teacherHeadPortrait">
+                                    <div class="teacherPic">
+                                        <img src="./images/teacher01.jpg" alt="">
+                                    </div>
+                                    <i class="champion animated wobble infinite"></i>
+                                </div>
+                                <h4 class="text-center mt20 textShadow">讲师：<span class="teacherName">莫月莹</span></h4>
+                                <p class="teacherContent  mt20  multiline multiline3 textShadow">主讲课程：<span class="majorCourse" id="majorCourse">《国际学校组织架构搭建及人员编制预算》、《构建教学团队与行政团队的平滑合作关系》</span></p>
+                                <p class="teacherContent  mt20  multiline multiline4 textShadow"><span class="teacherNow" id="teacherNow">现任tuenbo集团人力资源及行政经理，分管集团广州誉德莱国际学校人事，行政和采购部门，从事人力资源工作超过20年。</span></p>
+                            </div>
+                            <div class="bg-wrap">
+                                <div class="circle-bg-top"></div>
+                                <div class="oval-bg"></div>
+                                <div class="diamond-bg-bottom"></div>
+                                <div class="triangle-bg"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--video&list_END -->
-    <!--prepareLessons-->
-    <div class="container mt40">
-        <h3 class="text-center mb50">备课中</h3>
-        <div class="row prepareLessonsBox mb10">
-            <div class="prepareLseeon pull-left">
-                <a href="./detailLesson.html">
-                    <div class="prepareLesson_desc">
-                        <img src="./images/prepareLseeon01.jpg" alt="">
-                        <p class="prepareLesson_title">国际学校HR管理课程</p>
+        <!--playVideo_END-->
+        <!-- CourseList -->
+        <div class="bg000">
+            <div class="container ptb50lr15">
+                <h3 class="text-center letterspacing1 types-title">国际学校HR管理课程</h3>
+                <h3 class="text-center mb50 letterspacing1"><small>一站式解决国际化学校运营各层面人才职业培训和能力提升</small></h3>
+                <div class="row" id="CourseContainer">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage01.jpg" alt="">
+                                    <div class="Couse_title" id="Couse_title">
+                                        <span class="Couse_subject">人力资源</span>
+                                        <span class="Couse_subject">管理</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage01.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage01.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">国际学校人力资源与构建</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="prepareLesson_intro">
-                        <p class="prepareLesson_subject">精英现身说管理</p>
-                        <p>开课时间：<span class="ClassBegins">2017-12-17</span> </p>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage02.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">外籍员工</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage02.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage02.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">外籍员工招聘与管理</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>
-
-            <div class="prepareLseeon pull-left">
-                <div class="prepareLesson_desc">
-                    <img src="./images/prepareLseeon02.jpg" alt="">
-                    <p class="prepareLesson_title">国际学校HR管理课程</p>
-                </div>
-                <div class="prepareLesson_intro">
-                    <p>精英现身说管理</p>
-                    <p>开课时间：2017-12-17</p>
-                </div>
-            </div>
-            <div class="prepareLseeon pull-left">
-                <div class="prepareLesson_desc">
-                    <img src="./images/prepareLseeon03.jpg" alt="">
-                    <p class="prepareLesson_title">国际学校HR管理课程</p>
-                </div>
-                <div class="prepareLesson_intro">
-                    <p>精英现身说管理</p>
-                    <p>开课时间：2017-12-17</p>
-                </div>
-            </div>
-            <div class="prepareLseeon pull-left">
-                <div class="prepareLesson_desc">
-                    <img src="./images/prepareLseeon04.jpg" alt="">
-                    <p class="prepareLesson_title">国际学校HR管理课程</p>
-                </div>
-                <div class="prepareLesson_intro">
-                    <p>精英现身说管理</p>
-                    <p>开课时间：2017-12-17</p>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage03.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">薪资福利</span>
+                                        <span class="Couse_subject">效绩</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage03.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage03.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">薪酬福利与效绩</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage04.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">发展</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage04.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage04.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">培训与发展</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- prepareLessonsEND-->
-    <!-- postLseeons -->
-    <div class="container mt40">
-        <h3 class="text-center mb50">往期课程</h3>
-        <div class="row plr0">
-            <div class="postLesson pull-left">
-                <a href="javascript:;">
-                    <div class="post_pic text-center">
-                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
-                    </div>
-                    <div class="post_desc">
-                        <div>创办学校的方案
-                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="bgfff">
+            <div class="container ptb50lr15">
+                <h3 class="text-center letterspacing1 types-title">国际学校市场招生课程</h3>
+                <h3 class="text-center mb50 letterspacing1"><small>一站式解决国际化学校招生各层面人才职业培训和能力提升</small></h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage05.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">人力资源</span>
+                                        <span class="Couse_subject">管理</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage05.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage05.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">国际学校人力资源与构建</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
                         </div>
-                        <p>&nbsp;&nbsp;12345</p>
                     </div>
-                </a>
-            </div>
-            <div class="postLesson pull-left">
-                <a href="javascript:;">
-                    <div class="post_pic text-center">
-                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
-                    </div>
-                    <div class="post_desc">
-                        <div>创办学校的方案
-                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage06.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">外籍员工</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage06.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage06.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">外籍员工招聘与管理</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
                         </div>
-                        <p>&nbsp;&nbsp;12345</p>
                     </div>
-                </a>
-            </div>
-            <div class="postLesson pull-left">
-                <a href="javascript:;">
-                    <div class="post_pic text-center">
-                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
-                    </div>
-                    <div class="post_desc">
-                        <div>创办学校的方案
-                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage07.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">薪资福利</span>
+                                        <span class="Couse_subject">效绩</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage07.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage07.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">薪酬福利与效绩</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
                         </div>
-                        <p>&nbsp;&nbsp;12345</p>
                     </div>
-                </a>
-            </div>
-            <div class="postLesson pull-left">
-                <a href="javascript:;">
-                    <div class="post_pic text-center">
-                        <img src="./images/pic2.jpg" alt="" class="dis_ib ">
-                    </div>
-                    <div class="post_desc">
-                        <div>创办学校的方案
-                            <div class="star pull-right"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4 Course-up">
+                                    <img src="./images/CourseImage08.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">发展</span>
+                                    </div>
+                                </div>
+                                <div class="Course borderRadio4 Course-mid"><img src="./images/CourseImage08.jpg" alt=""></div>
+                                <div class="Course borderRadio4 Course-down"><img src="./images/CourseImage08.jpg" alt=""></div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">培训与发展</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
                         </div>
-                        <p>&nbsp;&nbsp;12345</p>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
+        <div class="bg000">
+            <div class="container ptb50lr15">
+                <h3 class="text-center letterspacing1 types-title">国际学校HR管理课程</h3>
+                <h3 class="text-center mb50 letterspacing1"><small>一站式解决国际化学校运营各层面人才职业培训和能力提升</small></h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4">
+                                    <img src="./images/CourseImage01.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">人力资源</span>
+                                        <span class="Couse_subject">管理</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">国际学校人力资源与构建</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4">
+                                    <img src="./images/CourseImage02.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">外籍员工</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">外籍员工招聘与管理</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4">
+                                    <img src="./images/CourseImage03.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">薪资福利</span>
+                                        <span class="Couse_subject">效绩</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">薪酬福利与效绩</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="CourseContainer">
+                            <a href="./detailLesson.html" target="_">
+                                <div class="Course borderRadio4">
+                                    <img src="./images/CourseImage04.jpg" alt="">
+                                    <div class="Couse_title">
+                                        <span class="Couse_subject">发展</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="CourseInfo">
+                                <p class="mtb5  oneline"><span class="CourseName">培训与发展</span></p>
+                                <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CourseList END-->
+        <!-- footer -->
+        <div class="bgfff">
+            <div class="container footer">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="footer-link">
+                            <a href="javascript:;">关于我们</a>
+                            <a href="javascript:;">联系我们</a>
+                            <a href="javascript:;">意见反馈</a>
+                        </div>
+                        <p class="footer-copyright">©&nbsp;2018&nbsp;xinxueshuo.cn&nbsp;京ICP备&nbsp;16031987号-1</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                        <div class="theThreePartLink">
+                            <p class="text-center">
+                                <a href="javascript:;" class="weChat iconfont icon-unie655" title="微信">
+                                    <i class="weChat-pic"></i>
+                                </a>
+                            </p>
+                            <p class="text-center weChat-desc">官方公众号</p>
+                        </div>
+                        <div class="theThreePartLink">
+                            <p class="text-center">
+                                <a href="https://www.linkedin.com/in/newschool-insight-b96319139" target="_" class="weChat iconfont icon-linkedin0" title="领英">
+                                </a>
+                            </p>
+                            <p class="text-center weChat-desc">官方领英</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer END-->
+        <!-- backtoTop -->
+        <div class="backtoTop animated" id="backtoTop">
+            <a href="javascript:;" class="toTop">
+                <span class="iconfont icon-icon3"></span>
+            </a>
+        </div>
+        <!-- backtoTop END-->
     </div>
-    <!-- postLseeonsEND -->
 </body>
 
 </html>
@@ -235,6 +402,7 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./js/bootstrap.min.js"></script>
+<script src="./js/swiper/swiper.min.js"></script>
 <script src="./js/config.js"></script>
 <script src="./js/jquery.cookie.js"></script>
 <script src="./js/index.js"></script>
