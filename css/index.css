@@ -416,6 +416,11 @@
 
 /* 讲师 */
 
+.lecturer {
+    position: relative;
+    visibility: hidden;
+}
+
 .lecturerBg {
     background-color: orange !important;
 }
@@ -436,7 +441,7 @@
 }
 
 .lecturerBox:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fffff0;
 }
 
 .lecturerName {

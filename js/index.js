@@ -47,59 +47,76 @@ $(function() {
     })
 })
 
-
 $(function() {
-    var CourseContainer = $("#CourseContainer")
-    $.ajax({
-        type: "get",
-        async: false,
-        data: "",
-        dataType : "json",
-        contentType: "application/json;charset=UTF-8",
-        url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Search_Course',
-        success: function(msg) {
-            console.log(msg.data)
-            for (var i = 0; i < 4; i++) {
-                CourseContainer.append(`
-                        <div class="col-md-3 col-sm-6">
-                            <div class="CourseContainer">
-                                <a href="./detailLesson.html" target="_">
-                                    <div class="Course Course-up">
-                                        <img src="${msg.data[i].CoverImage}" alt="">
-                                        <div class="state">${msg.data[i].CourseState}</div>
-                                    </div>
-                                    <div class="Course Course-mid"><img src="${msg.data[i].CoverImage}" alt=""></div>
-                                    <div class="Course Course-down"><img src="${msg.data[i].CoverImage}" alt=""></div>
-                                </a>
-                                <div class="CourseInfo">
-                                    <p class="mtb5 oneline"><span class="CourseName">${msg.data[i].CourseName}</span></p>
-                                    <p class="mtb5 twoline"><span class="CourseDesc" title="${msg.data[i].CourseDescription}">${msg.data[i].CourseDescription}</span></p>
-                                    <p class="mtb5">开课时间：<span class="CourseTime">${msg.data[i].ClassBegins}</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    `)
-            }
-            var aState = $(".state")
-            for (var i = 0; i < aState.length; i++) {
-                switch (aState.eq(i).text()) {
-                    case "查看回放":
-                        aState.eq(i).addClass("viewBack")
-                        break;
-                    case "正在直播":
-                        aState.eq(i).addClass("new animated tada infinite")
-                        break;
-                    case "备课中":
-                        aState.eq(i).addClass("makepreparations")
-                        break;
+    var flag = true,
+        aBox = $(".lecturer")
+    $(window).scroll(function() {
+        if (flag) {
+            var sc = $(window).scrollTop();
+            if (sc >= 2000) {
+                for (var i = 0; i < aBox.length; i++) {
+                    aBox.eq(i).css("visibility", "visible")
+                    aBox.eq(i).css("animation-delay", i / 5 + "s").addClass("animated fadeInUp")
                 }
+                flag = false;
             }
-        },
-        error: function(msg) {
-            console.log("error:" + msg)
         }
     })
 })
+
+
+// $(function() {
+//     var CourseContainer = $("#CourseContainer")
+//     $.ajax({
+//         type: "get",
+//         async: false,
+//         data: "",
+//         dataType : "json",
+//         contentType: "application/json;charset=UTF-8",
+//         url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Search_Course',
+//         success: function(msg) {
+//             console.log(msg.data)
+//             for (var i = 0; i < 4; i++) {
+//                 CourseContainer.append(`
+//                         <div class="col-md-3 col-sm-6">
+//                             <div class="CourseContainer">
+//                                 <a href="./detailLesson.html" target="_">
+//                                     <div class="Course Course-up">
+//                                         <img src="${msg.data[i].CoverImage}" alt="">
+//                                         <div class="state">${msg.data[i].CourseState}</div>
+//                                     </div>
+//                                     <div class="Course Course-mid"><img src="${msg.data[i].CoverImage}" alt=""></div>
+//                                     <div class="Course Course-down"><img src="${msg.data[i].CoverImage}" alt=""></div>
+//                                 </a>
+//                                 <div class="CourseInfo">
+//                                     <p class="mtb5 oneline"><span class="CourseName">${msg.data[i].CourseName}</span></p>
+//                                     <p class="mtb5 twoline"><span class="CourseDesc" title="${msg.data[i].CourseDescription}">${msg.data[i].CourseDescription}</span></p>
+//                                     <p class="mtb5">开课时间：<span class="CourseTime">${msg.data[i].ClassBegins}</span></p>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     `)
+//             }
+//             var aState = $(".state")
+//             for (var i = 0; i < aState.length; i++) {
+//                 switch (aState.eq(i).text()) {
+//                     case "查看回放":
+//                         aState.eq(i).addClass("viewBack")
+//                         break;
+//                     case "正在直播":
+//                         aState.eq(i).addClass("new animated tada infinite")
+//                         break;
+//                     case "备课中":
+//                         aState.eq(i).addClass("makepreparations")
+//                         break;
+//                 }
+//             }
+//         },
+//         error: function(msg) {
+//             console.log("error:" + msg)
+//         }
+//     })
+// })
 
 // $(function() {
 //     if ($(".new")) {
