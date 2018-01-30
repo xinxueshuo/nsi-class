@@ -121,7 +121,7 @@
     opacity: .9;
     transition: all .3s;
     position: relative;
-    animation: autoBig 2s infinite ease-in-out;
+    animation: autoBig 1.3s infinite ease-in-out;
     text-shadow: 0 3px 8px rgba(7, 17, 27, 0.4);
 }
 
@@ -316,8 +316,23 @@
     position: absolute;
     border: 2px solid #FFF;
     border-radius: 12px;
-    top: -8px;
-    left: -8px;
+    top: -10px;
+    left: -10px;
+    z-index: 4;
+    font-size: 14px;
+    color: #FFF;
+    line-height: 20px;
+    padding: 2px 8px;
+    background: linear-gradient(-90deg, #f68688 0, #f02930 100%);
+    box-shadow: 0 0 20px #f68688;
+}
+
+.viewBack {
+    position: absolute;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    top: -10px;
+    left: -10px;
     z-index: 4;
     font-size: 14px;
     color: #FFF;
@@ -326,26 +341,12 @@
     background: linear-gradient(-90deg, #86eff6 0, #2990f0 100%);
 }
 
-.viewBack {
-    position: absolute;
-    border: 2px solid #FFF;
-    border-radius: 12px;
-    top: -8px;
-    left: -8px;
-    z-index: 4;
-    font-size: 14px;
-    color: #FFF;
-    line-height: 20px;
-    padding: 2px 8px;
-    background: linear-gradient(-90deg, #f68688 0, #f02930 100%);
-}
-
 .makepreparations {
     position: absolute;
     border: 2px solid #FFF;
     border-radius: 12px;
-    top: -8px;
-    left: -8px;
+    top: -10px;
+    left: -10px;
     z-index: 4;
     font-size: 14px;
     color: #FFF;
@@ -413,6 +414,42 @@
 }
 
 
+/* 讲师 */
+
+.lecturerBg {
+    background-color: orange !important;
+}
+
+.lecturerTitle {
+    font-weight: 700;
+    color: #f1f1f1;
+}
+
+.lecturerTitle>small {
+    color: #eae7e7;
+}
+
+.lecturerBox {
+    padding: 30px 15px;
+    background: rgba(255, 255, 255, .8);
+    transition: all .3s;
+}
+
+.lecturerBox:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.lecturerName {
+    color: #07111b;
+    text-shadow: 0 0 0;
+}
+
+.lecturerDesc {
+    color: #4D555D;
+    text-shadow: 0 0 0;
+}
+
+
 /* footer */
 
 .footer {
@@ -445,6 +482,7 @@
     top: -215px;
     left: -70px;
     display: none;
+    z-index: 999;
 }
 
 .weChat:hover .weChat-pic {
@@ -570,7 +608,10 @@
         padding: 15px;
     }
     .CourseContainer {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .lecturerBox {
+        margin-top: 15px;
     }
 }
 
