@@ -33,9 +33,10 @@
     color: #fff;
 }
 
-.nav>li {
+
+/* .nav>li {
     background: #225189;
-}
+} */
 
 .nav>li>a:hover {
     color: #225189;

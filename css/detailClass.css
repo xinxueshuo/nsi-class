@@ -1,6 +1,20 @@
+.lessonContainer {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ccc;
+}
+
 .lesson_box {
-    min-height: 340px;
     transition: all 1s;
+}
+
+.lesson_imgBox {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.lesson_content {
+    padding: 15px;
 }
 
 .lesson_content>.LessonName {
@@ -13,16 +27,15 @@
     color: #ff9900;
 }
 
-.lesson_content>.buy {
+.lesson_content .buy {
     color: #999;
 }
 
 .lesson_content>p {
-    height: 44px;
-    line-height: 44px;
+    height: 40px;
+    line-height: 40px;
     color: rgba(7, 17, 27, 0.7);
     font-weight: 700;
-    /* line-height: 60px; */
 }
 
 .lesson_content>p>span {
@@ -36,7 +49,8 @@
     text-indent: 10px;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 5px 0 15px 0;
+    border-radius: 4px;
 }
 
 .lesson_content>.price .CoursePrice {
@@ -55,6 +69,7 @@
     outline: none;
     font-weight: 700;
     padding: 0 10px;
+    border-radius: 4px;
 }
 
 .lesson_content>.watchNow {
@@ -70,6 +85,7 @@
     font-weight: 700;
     padding: 0 10px;
     margin-left: 5px;
+    border-radius: 4px;
 }
 
 .lesson_content>.buyNow>span,
@@ -77,12 +93,12 @@
     font-size: 20px;
     font-weight: normal;
     vertical-align: middle;
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .lesson_content>.buyNow>span {
     position: relative;
-    top: -2px;
+    top: -1px;
 }
 
 .lesson_content>.watchNow>span {
@@ -173,23 +189,113 @@
 }
 
 
+/* 订单 */
+
+.order-header {
+    border-bottom: 0;
+    padding: 15px 30px;
+}
+
+.order-title {
+    font-size: 25px;
+}
+
+.order-body {
+    padding: 0
+}
+
+.orderDesc {
+    background-color: #f5f5f5;
+    padding: 15px 30px;
+}
+
+.orderDesc>p {
+    height: 30px;
+    line-height: 30px;
+    /* font-weight: 500; */
+    color: rgba(7, 17, 27, 0.7);
+}
+
+.orderDesc>p>span {
+    font-weight: 700;
+}
+
+.orderDesc-shouldPay {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.orderDesc-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f01400;
+}
+
+.payment {
+    padding: 30px 20px;
+}
+
+.payment-content {
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 4px;
+}
+
+.pay {
+    font-size: 13px;
+    font-weight: 800;
+    background-color: #f1f1f1;
+    padding: 10px 30px !important;
+    color: #555 !important;
+}
+
+.pay01 {
+    position: relative;
+}
+
+.pay01::before {
+    display: block;
+}
+
+.pay:hover {
+    color: #555 !important;
+}
+
+.payContent {
+    padding: 15px;
+}
+
+.wechat {
+    display: inline-block;
+    width: 130px;
+    height: 38px;
+    margin-left: 10px;
+    background: url("../images/WePayLogo.png") no-repeat;
+    background-size: 100%;
+}
+
+.qrCode {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+}
+
+.qrCodeDesc {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background: url("../images/paymentDesc.png");
+    background-size: 100%;
+}
+
+
 /* @ */
 
-@media (min-width:1199px) {
-    .lesson_img>img {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width:1198px) and (min-width:997px) {
-    .lesson_img>img {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width:996px) {
-    .lesson_img>img {
-        margin-top: 10px;
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 750px;
+        margin: 60px auto;
     }
 }
 
@@ -197,19 +303,10 @@
     .lessonContainer {
         width: 100%;
         margin: 0 auto;
-    }
-    .row {
-        padding: 0 15px;
+        border-radius: 0 0 4px 4px;
     }
     .navbar-header {
         padding-left: 15px;
-    }
-    .lesson_box {
-        height: 170px;
-        /* padding-top: 10px; */
-    }
-    .lesson_content {
-        margin: 15px auto;
     }
     .lesson_content>p {
         margin-bottom: 5px;
@@ -217,11 +314,6 @@
     .lesson_content>h4 {
         margin-bottom: 5px;
     }
-    /* .lesson_content>.buyNow {
-        margin-top: 5px;
-        height: 30px;
-        line-height: 30px;
-    } */
     .lesson_content>.buy>span {
         padding-right: 0;
     }
@@ -234,10 +326,14 @@
     }
 }
 
-@media (max-width:996px) and (min-width:769px) {
-    .lesson_img>img {
-        margin-top: 20px;
+@media(max-width:1024px) {
+    .lesson_content>p {
+        height: 30px;
+        line-height: 31px;
     }
+}
+
+@media (max-width:996px) and (min-width:769px) {
     .lesson_content {
         width: 175px;
         margin: 30px auto;
@@ -269,5 +365,11 @@
     .lesson_content>.watchNow {
         height: 35px !important;
         line-height: 35px !important;
+    }
+}
+
+@media (max-width:321px) {
+    .orderDesc-shouldPay {
+        position: static;
     }
 }
