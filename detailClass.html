@@ -8,9 +8,10 @@
     <title>新学说</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_560175_60r3fre6h4kro1or.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/detailLesson.css">
+    <link rel="stylesheet" href="./css/detailClass.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,8 +44,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="./index.html">首页</a></li>
                         <li class="active"><a href="./testLivePC.html">正在直播<span class="sr-only">(current)</span></a></li>
-                        <li><a href="./index.html">课程中心</a></li>
-                        <li><a href="./index.html">讲师中心</a></li>
+                        <li><a href="./classCenter.html">课程中心</a></li>
+                        <!-- <li><a href="./index.html">讲师中心</a></li> -->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">购物车</a></li>
@@ -60,21 +61,23 @@
     </div>
     <!-- 顶部END -->
     <!-- content -->
-    <div class="container mt30 box_shadow">
-        <div class="row lesson_box">
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 lesson_img "><img src="./images/lesson_img.gif" alt=""></div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 lesson_desc">
-                <div class="lesson_content">
-                    <p class="LessonName">课程的名字</p>
-                    <p id="ClassId" style="display:none">10001</p>
-
-                    <p>开课时间：2017年12月12日</p>
-                    <p class="buy">已有303人购买<span class="pull-right">收藏</span></p>
-                    <p class="price">￥8888</p>
-                    <button class="buyNow btn" id="buyNow">立即购买</button>
-                    <button class="watchNow  btn disabled" id="watchNow">立即观看</button>
+    <div class="container-fluid">
+        <div class="container mt30 box_shadow lessonContainer">
+            <div class="row lesson_box">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 lesson_img "><img src="./images/lesson_img.gif" alt=""></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 lesson_desc">
+                    <div class="lesson_content">
+                        <p class="LessonName" id="CourseName">课程的名字</p>
+                        <p id="ClassId" style="display:none">10001</p>
+                        <p>开课时间：<span id="ClassBegins">2017年12月12日</span></p>
+                        <p>时长：<span>2小时</span></p>
+                        <p class="buy">已有 <span>303</span> 人购买</p>
+                        <p class="score">评分：<span>9.9</span>分&nbsp;&nbsp;&nbsp;<i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i></p>
+                        <p class="price">￥<span id="CoursePrice" class="CoursePrice">8888</span></p>
+                        <button class="buyNow" id="buyNow">立即购买<span class="iconfont icon-gouwuche3"></span></button>
+                        <button class="watchNow disabled" id="watchNow">立即观看<span class="iconfont icon-bofang1"></span></button>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -115,7 +118,6 @@
             <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
         </div>
         <div class="tab-pane fade" id="tab03">
-
             <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
         </div>
         <div class="tab-pane fade" id="tab04">
