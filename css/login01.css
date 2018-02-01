@@ -1,0 +1,106 @@
+body {
+    background: #fcfcfc;
+}
+
+
+/* 顶部 */
+
+.top {
+    padding: 11px 16px;
+    background: #FFF;
+    border: 1px solid #e1e1e1;
+}
+
+.logo {
+    display: inline-block;
+    width: 47px;
+    height: 55px;
+    background: url("../images/logoPic.png") no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+.logoDesc {
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    top: -5px;
+    left: 5px;
+    text-align: center;
+}
+
+.logoDesc>p:first-of-type {
+    font-size: 18px;
+}
+
+.welcome {
+    font-family: "SimSun";
+    color: #999;
+    font-size: 12px;
+    position: relative;
+    top: 20px;
+}
+
+.welcome>a:hover {
+    color: #f60;
+}
+
+
+/* wrap*/
+
+.wrap {
+    background: url("../images/regist_topshadow.png") repeat-x;
+}
+
+
+/* footer */
+
+.bgfff {
+    background: #fcfcfc !important;
+    box-shadow: 0 0 0
+}
+
+.footer {
+    padding: 36px 15px;
+}
+
+.footer-link>a {
+    margin: 0 10px;
+    color: #99a1a6;
+}
+
+.footer-link>a:hover {
+    color: #07111B;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #93999F;
+    font-family: "PingFang SC", "微软雅黑", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+    padding-left: 10px;
+    line-height: 60px;
+}
+
+@media (min-width: 1200px) {
+    .wrap-container {
+        padding: 0 50px;
+    }
+}
+
+@media(max-width:415px) {
+    .logoDesc>p:first-of-type {
+        font-size: 13px;
+    }
+    .logoDesc>p:last-of-type {
+        font-size: 12px;
+    }
+    .logo {
+        width: 42px;
+    }
+    .logoDesc {
+        top: -11px;
+    }
+    .welcome {
+        top: 9px;
+    }
+}
