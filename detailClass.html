@@ -8,7 +8,8 @@
     <title>新学说</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_560175_60r3fre6h4kro1or.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_560175_05y2k7t8v3sug14i.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/detailClass.css">
@@ -48,7 +49,7 @@
                         <!-- <li><a href="./index.html">讲师中心</a></li> -->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">购物车</a></li>
+                        <!-- <li><a href="#">购物车</a></li> -->
                         <li><a href="login.html" id="login">登录</a></li>
                         <li><a href="#">注册</a></li>
                     </ul>
@@ -62,24 +63,26 @@
     <!-- 顶部END -->
     <!-- content -->
     <div class="container-fluid">
-        <div class="container mt30 lessonContainer">
-            <div class="row lesson_box">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 lesson_imgBox">
-                    <div class="lesson_img">
-                        <img src="./images/lesson_img.gif" alt="">
+        <div class="container">
+            <div class="lessonContainer mt30 ">
+                <div class="row lesson_box">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 lesson_imgBox">
+                        <div class="lesson_img">
+                            <img src="./images/lesson_img.gif" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 lesson_desc">
-                    <div class="lesson_content">
-                        <p class="LessonName" id="CourseName">课程的名字</p>
-                        <p id="ClassId" style="display:none">10001</p>
-                        <p>开课时间：<span id="ClassBegins">2017年12月12日</span></p>
-                        <p>时长：<span>2小时</span></p>
-                        <p class="buy">已有 <span>303</span> 人购买</p>
-                        <p class="score">评分：<span>9.9</span>分&nbsp;&nbsp;&nbsp;<i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i></p>
-                        <p class="price">￥<span id="CoursePrice" class="CoursePrice">8888</span></p>
-                        <button class="buyNow" id="buyNow" data-toggle="modal" data-target="#myModal"><span class="iconfont icon-gouwuche3"></span>立即购买</button>
-                        <button class="watchNow disabled" id="watchNow"><span class="iconfont icon-bofang1"></span>立即观看</button>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 lesson_desc">
+                        <div class="lesson_content">
+                            <p class="LessonName" id="CourseName">课程的名字</p>
+                            <p id="ClassId" style="display:none">10001</p>
+                            <p>开课时间：<span id="ClassBegins">2017年12月12日</span></p>
+                            <p>时长：<span>2小时</span></p>
+                            <p class="buy">已有 <span>303</span> 人购买</p>
+                            <p class="score">评分：<span>9.9</span>分&nbsp;&nbsp;&nbsp;<i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i></p>
+                            <p class="price">￥<span id="CoursePrice" class="CoursePrice">8888</span><small>(您购买的是整套课程，暂不单售)</small></p>
+                            <button class="buyNow" id="buyNow" data-toggle="modal" data-target="#myModal"><span class="iconfont icon-gouwuche3"></span>购买整套</button>
+                            <button class="watchNow disabled" id="watchNow"><span class="iconfont icon-bofang1"></span>立即观看</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +116,7 @@
             </ul>
         </div>
     </div>
-    <div id="myTabContent" class="container w1200 tab-content">
+    <div id="myTabContent" class="container tab-content">
         <div class="tab-pane fade in active" id="tab01">
             <p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
         </div>
@@ -135,39 +138,40 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header order-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title order-title" id="myModalLabel"><span></span>收银台</h4>
+                    <button type="button" class="close cancle" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title order-title" id="myModalLabel"><span class="order-logo"></span>新学说支付平台</h4>
                 </div>
                 <div class="modal-body order-body">
                     <div class="orderDesc">
                         <p>订单编号：<span>1111111</span></p>
-                        <p>订单类型：<span>1111111</span></p>
-                        <p class="orderDesc-shouldPay">应付金额：￥<span class="orderDesc-price">8888</span></p>
+                        <!-- <p>订单类型：<span>1111111</span></p> -->
+                        <p class="orderDesc-shouldPay">应付金额：<b>￥</b><span class="orderDesc-price">8888</span></p>
                     </div>
                     <div class="payment">
                         <ul id="myPayment" class="nav nav-tabs">
                             <li class="active"><a href="#pay01" data-toggle="tab" class="pay pay01">
                                         微信支付</a></li>
-                            <li><a href="#pay02" data-toggle="tab" class="pay pay02">支付宝</a></li>
+                            <!-- <li><a href="#pay02" data-toggle="tab" class="pay pay02">支付宝</a></li> -->
                         </ul>
                         <div class="tab-content payment-content">
                             <div class="tab-pane fade in active" id="pay01">
                                 <div class="payContent">
                                     <div><span class="wechat"></span></div>
                                     <div class="text-center">
-                                        <p><span class="qrCode"></span></p>
+                                        <p><span class="qrCode" id="qrCode"></span></p>
                                         <p><span class="qrCodeDesc"></span></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pay02">
+                            <!-- <div class="tab-pane fade" id="pay02">
                                 <div class="payContent">支付宝</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <p class="dis_ib problem"><span class="iconfont icon-wentidingdan"></span>支付遇到问题？请联系新学说客服 <b>010-52468286</b></p>
+                    <button type="button" class="btn btn-default cancle" data-dismiss="modal">取消</button>
                     <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
                 </div>
             </div>

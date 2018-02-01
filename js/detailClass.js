@@ -19,7 +19,7 @@ function buyNow() {
         })
     })
 }
-buyNow()
+// buyNow()
 
 function watchNow() {
     var $watchNow = $("#watchNow")
@@ -101,7 +101,7 @@ $(function() {
             },
             url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Course_GetHtml',
             success(msg) {
-                console.log(msg)
+                // console.log(msg)
                 $tab01.html(msg.data[0].Html01)
                 $tab02.html(msg.data[0].Html02)
                 $tab03.html(msg.data[0].Html03)
@@ -116,10 +116,46 @@ $(function() {
         data: { Id: Id },
         url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Search_Course',
         success: function(msg) {
-            console.log(msg.data[0])
+            // console.log(msg.data[0])
             $("#CourseName").text(msg.data[0].CourseName);
             $("#ClassBegins").text(msg.data[0].ClassBegins);
             $("#CoursePrice").text(msg.data[0].CoursePrice)
         }
     })
+
+
+    //立即购买
+
+    function buy() {
+        var buyNow = $("#buyNow")
+        if ($.cookie('username') !== undefined) {
+            buyNow.on("click", function() {
+                // console.log($.cookie('username'))
+                var data = {
+                    'UserMail': $.cookie('username'),
+                    'Id': Id
+                }
+                $.ajax({
+                    type: "post",
+                    dataType: "json",
+                    data: data,
+                    url: 'http://' + changeUrl.address + '/Payment_api?whereFrom=WeChatPayment',
+                    success: function(msg) {
+                        // console.log(msg.data)
+                        $("#qrCode").css("background-image", "url(" + msg.data + ")")
+                    },
+                    error: function() {
+                        console.log("error")
+                    }
+                })
+            })
+        } else {
+            buyNow.on("click", function() {
+                alert("请先登录")
+                return false;
+            })
+        }
+
+    }
+    buy()
 })

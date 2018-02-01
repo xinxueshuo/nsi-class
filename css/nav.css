@@ -49,7 +49,13 @@
 }
 
 .navbar-nav {
+    position: relative;
     margin: 0 -15px;
+    z-index: 999;
+}
+
+.navbar-nav>li {
+    background: #225189;
 }
 
 .navbar-header {
@@ -63,10 +69,4 @@
 
 .navbar-toggle>.icon-bar {
     background: #FFF;
-}
-
-.navbar-collapse {
-    position: relative;
-    z-index: 10000;
-    border-color: #1983bf;
 }
