@@ -54,6 +54,10 @@
         margin-top: 45px;
     }
     
+    .mb5 {
+        margin-bottom: 5px;
+    }
+    
     .mb10 {
         margin-bottom: 10px;
     }
@@ -112,6 +116,14 @@
     
     .box_shadow {
         box-shadow: 0 0 10px #666;
+    }
+    
+    .fl {
+        float: left;
+    }
+    
+    .fr {
+        float: right;
     }
     
     .clearfix:after {

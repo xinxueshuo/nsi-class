@@ -80,7 +80,8 @@ tr:hover {
 
 .logo02 {
     margin-left: 15px;
-    margin-right: 5px;
+    font-size: 29px;
+    vertical-align: middle;
 }
 
 .activityListDesc_container,

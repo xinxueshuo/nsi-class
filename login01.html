@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>新学说-登录</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_ujd5teog3n9oogvi.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_562159_9t0m5aooj3l92j4i.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/login01.css">
 </head>
@@ -18,14 +18,14 @@
         <div class="top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-xs-6">
+                    <div class="col-md-3 col-xm-12 col-xs-6">
                         <a href="./index.html" class="logo"></a>
                         <div class="logoDesc">
                             <p>新学说课堂</p>
                             <p>NSI CLASS</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-6 col-md-offset-6">
+                    <div class="col-md-3 col-xm-12 col-xs-6 col-md-offset-6">
                         <p class="welcome">您好，欢迎光临新学说课堂！<a href="#">请登录</a></p>
                     </div>
                 </div>
@@ -39,7 +39,24 @@
                     <div class="col-md-6">
                         <img src="./images/loginWrap.jpg" alt="">
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <div class="loginBox">
+                            <p class="error_tips" id="error_tips"><span class="iconfont icon-icon tips"></span>您填写的账户名不存在请核对后重新填写</p>
+                            <h4 class="clearfix mb5">新学说课堂学员登录 <a href="javascript:;" class="fr">注册新账号</a></h4>
+                            <form action="">
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-yonghutouxiang" for="username"></label>
+                                    <input type="text" placeholder="邮箱账号" id="username" class="username" name="email">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-mima" for="username"></label>
+                                    <input type="password" placeholder="密码" id="password" class="password">
+                                </div>
+                                <p class="text-right forget"><a href="javascript:;">忘记密码?</a></p>
+                                <button id="loginButton" class="loginButton">登录</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,3 +85,4 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/config.js"></script>
 <script src="./js/jquery.cookie.js"></script>
+<script src="./js/login.js"></script>
