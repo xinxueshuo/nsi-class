@@ -15,6 +15,8 @@ function userLogin() {
         jsonp:   "Callback", //服务端用于接收callback调用的function名的参数  
         success :   function(msg) {
             console.log(msg);
+            var tips = $("#tipsTxt"),
+                error_tips = $("#error_tips")
             if (msg.member_sign > 0) {
                 $.cookie('member_sign', msg.member_sign, { expires: 1, path: '/' });
                 $.cookie('username', msg.username, { expires: 1, path: '/' });
@@ -26,19 +28,16 @@ function userLogin() {
                 console.log($.cookie('User_TureName')) //真实姓名
                 window.location.href = "index.html";
             } else if (msg.member_sign == -2) {
-                $('#errPassword').modal({
-                    keyboard: true //用户密码错误
-                })
+                error_tips.css("display", "block")
+                tips.text("您填写的账号或密码错误")
             } else if (msg.member_sign == -1) {
-                $('#emailNoPass').modal({ //邮箱没有激活
-                    keyboard: true
-                })
+                error_tips.css("display", "block")
+                tips.text("邮箱没有激活")
             } else if (msg.member_sign == 0) {
-                $('#waitForPass').modal({ //账号没有审核
-                    keyboard: true
-                })
+                error_tips.css("display", "block")
+                tips.text("账号没有审核")
             }
-            window.location.href("http://class.xinxueshuo.cn");
+            // window.location.href("http://class.xinxueshuo.cn");
 
         },
         error: function() {
@@ -72,32 +71,12 @@ $(function() {
     }
 })
 
-$(function() {
-    function validator() {
-        var username = $("#username"),
-            password = $("#password"),
-            emailBox = $(".emailBox"),
-            pwdBox = $(".pwdBox "),
-            line = $(".line"),
-            loginButton = $("#loginButton")
-        username.on("blur", function() {
-            if (username.val() === "") {
-                emailBox.css("borderColor", "#ff9494")
-                line.eq(0).css("background", "#ff9494")
-            } else {
-                emailBox.css("borderColor", "#dedede")
-                line.eq(0).css("background", "#dedede")
-            }
-        })
-        password.on("blur", function() {
-            if (password.val() === "") {
-                pwdBox.css("borderColor", "#ff9494")
-                line.eq(1).css("background", "#ff9494")
-            } else {
-                pwdBox.css("borderColor", "#dedede")
-                line.eq(1).css("background", "#dedede")
-            }
-        })
-    }
-    validator()
-})
+// $(function() {
+//     var btn = $("#loginButton"),
+//         tips = $("#tipsTxt")
+//     btn.on("click", function() {
+//         if ($("#username").val == "" || $("#password").val() == "") {
+//             tips.text("请输入账号和密码")
+//         }
+//     })
+// })

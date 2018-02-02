@@ -12,12 +12,12 @@ body {
 }
 
 .logo {
-    display: inline-block;
+    /* display: inline-block;
     width: 47px;
     height: 55px;
-    background: url("../images/logoPic.png") no-repeat;
+    background: url("../images/logo20180202.png") no-repeat;
     background-size: 100%;
-    vertical-align: middle;
+    vertical-align: middle; */
 }
 
 .logoDesc {
@@ -72,7 +72,8 @@ body {
     border: 1px solid #e5debc;
     border-radius: 4px;
     color: #999;
-    background: #fff7d1
+    background: #fff7d1;
+    display: none;
 }
 
 .loginBox>h4 {
@@ -201,7 +202,7 @@ body {
         top: -11px;
     }
     .welcome {
-        top: 9px;
+        top: 10px;
     }
     .loginBox {
         padding: 15px;

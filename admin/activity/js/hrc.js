@@ -1,5 +1,6 @@
 $(function() {
     var sub = $("#sub")
+
     sub.on("click", function() {
         var job = "",
             hrYear = "",
@@ -10,36 +11,36 @@ $(function() {
             whyJoin = "",
             interested = "",
             haveClass = "";
-        if ($("#Title_input3").val() == "") {
-            alert("请填写学员姓名")
+        $("input[name='job']:checked").each(function() {
+            job = $(this).val()
+        })
+        $("input[name='hrYear']:checked").each(function() {
+            hrYear = $(this).val()
+        })
+        $("input[name='jobYear']:checked").each(function() {
+            jobYear = $(this).val()
+        })
+        $("input[name='afford']:checked").each(function() {
+            afford = $(this).val()
+        })
+        $("input[name='attr']:checked").each(function() {
+            attr = $(this).val()
+        })
+        $("input[name='personNum']:checked").each(function() {
+            personNum = $(this).val()
+        })
+        $("input[name='whyJoin']:checked").each(function() {
+            whyJoin = $(this).val()
+        })
+        $("input[name='interested']:checked").each(function() {
+            interested += $(this).val() + "；"
+        })
+        $("input[name='haveClass']:checked").each(function() {
+            haveClass += $(this).val() + "；"
+        })
+        if ($("#Title_input3").val() == "" || $("#Title_input4").val() == "" || $("#Title_input5").val() == "" || $("#Title_input11").val() == "" || job == "" || hrYear == "" || jobYear == "" || afford == "" || afford == "" || attr == "" || personNum == "" || whyJoin == "" || interested == "" || haveClass == "") {
+            alert("请填写必填项")
         } else {
-            $("input[name='job']:checked").each(function() {
-                job = $(this).val()
-            })
-            $("input[name='hrYear']:checked").each(function() {
-                hrYear = $(this).val()
-            })
-            $("input[name='jobYear']:checked").each(function() {
-                jobYear = $(this).val()
-            })
-            $("input[name='afford']:checked").each(function() {
-                afford = $(this).val()
-            })
-            $("input[name='attr']:checked").each(function() {
-                attr = $(this).val()
-            })
-            $("input[name='personNum']:checked").each(function() {
-                personNum = $(this).val()
-            })
-            $("input[name='whyJoin']:checked").each(function() {
-                whyJoin = $(this).val()
-            })
-            $("input[name='interested']:checked").each(function() {
-                interested += $(this).val() + "；"
-            })
-            $("input[name='haveClass']:checked").each(function() {
-                haveClass += $(this).val() + "；"
-            })
             var data = {
                 'Title1': $("#activityTitle").text(),
                 'Title2': $("#activityDescription").text(),
@@ -85,7 +86,7 @@ $(function() {
                 url: 'http://' + changeUrl.address + '/Class_activity?whereFrom=insert',
                 success: function(msg) {
                     // console.log(msg.data)
-                    alert("报名成功!我们会有工作人员联系您")
+                    alert("报名成功!我们将会有工作人员联系您")
                     location.reload()
                 },
                 error: function() {

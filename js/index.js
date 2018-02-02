@@ -53,7 +53,7 @@ $(function() {
     $(window).scroll(function() {
         if (flag) {
             var sc = $(window).scrollTop();
-            if (sc >= 2000) {
+            if (sc >= 1700) {
                 for (var i = 0; i < aBox.length; i++) {
                     aBox.eq(i).css("visibility", "visible")
                     aBox.eq(i).css("animation-delay", i / 5 + "s").addClass("animated fadeInUp")
