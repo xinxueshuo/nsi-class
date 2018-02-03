@@ -1,72 +1,52 @@
-/* 顶部 */
-
-.container-fluid {
-    padding: 0;
-}
-
 .row,
 .container {
     transition: all 1s;
 }
 
-.top {
-    background: #225189;
-}
 
-.containerTop {
-    padding-left: 0;
-    padding-right: 0;
-    height: 50px;
-}
-
-.containerTop .logo {
-    display: inline-block;
-    background: url("../images/logofff.png") no-repeat;
-    background-size: 70% 83%;
-    width: 170px;
-    height: 50px;
-    background-position: 40px 5px;
-}
-
-.nav>li>a {
-    color: #fff;
-}
-
-.nav>li {
-    background: #225189;
-}
-
-.nav>li>a:hover {
-    color: #225189;
-    background: rgb(248, 246, 246);
-}
+/* 顶部 */
 
 .navbar {
-    border: none;
     margin-bottom: 0;
+    border-radius: 0;
+    min-height: 76px;
+    margin-bottom: 0;
+    /* border: 1px solid transparent; */
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, .1);
 }
 
-.navbar-nav {
-    margin: 0 -15px;
-}
-
-.navbar-header {
-    margin-right: 20px;
+.navbar-brand {
+    height: auto;
 }
 
 .navbar-toggle {
-    border: 1px solid #FFF;
-    color: #FFF;
+    margin-top: 25px;
 }
 
-.navbar-toggle>.icon-bar {
-    background: #FFF;
+.navbar-nav>li {
+    height: 85px;
+    line-height: 85px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
-.navbar-collapse {
-    position: relative;
-    z-index: 10000;
-    border-color: #1983bf;
+.navbar-nav>li>a {
+    display: inline-block;
+    font-size: 17px;
+}
+
+.navicon {
+    font-size: 28px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+
+@media(max-width:767px) {
+    .navbar-nav>li {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 0;
+    }
 }
 
 
@@ -216,7 +196,7 @@
 }
 
 .teacherDesc {
-    min-height: 430px;
+    min-height: 420px;
     /* background-color: #f8f8f8; */
     padding: 11px 15px;
     position: relative;
@@ -249,6 +229,10 @@
 
 .multiline4 {
     -webkit-line-clamp: 4;
+}
+
+.pt30-pt15 {
+    padding-top: 30px;
 }
 
 
@@ -422,7 +406,8 @@
 }
 
 .lecturerBg {
-    background-color: orange !important;
+    background: url("../images/eliteTbg.jpg") center center no-repeat #f3f5f7;
+    background-size: cover;
 }
 
 .lecturerTitle {
@@ -441,7 +426,7 @@
 }
 
 .lecturerBox:hover {
-    background-color: #fffff0;
+    background-color: #ffffff;
 }
 
 .lecturerName {
@@ -566,21 +551,6 @@
 
 /* @ */
 
-@media (min-width: 1200px) {
-    .container {
-        width: 1200px;
-    }
-    .navbar-collapse {
-        border-top: 0;
-    }
-}
-
-@media (max-width:992px) and (min-width:767px) {
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-    }
-}
-
 @media (max-width:769px) {
     .teacherDesc {
         margin-top: 15px;
@@ -611,6 +581,9 @@
     }
     .ptb30lr15 {
         padding: 15px;
+    }
+    .pt30-pt15 {
+        padding-top: 15px;
     }
     .CourseContainer {
         margin-bottom: 20px;

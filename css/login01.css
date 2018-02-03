@@ -11,15 +11,6 @@ body {
     border: 1px solid #e1e1e1;
 }
 
-.logo {
-    /* display: inline-block;
-    width: 47px;
-    height: 55px;
-    background: url("../images/logo20180202.png") no-repeat;
-    background-size: 100%;
-    vertical-align: middle; */
-}
-
 .logoDesc {
     display: inline-block;
     vertical-align: bottom;

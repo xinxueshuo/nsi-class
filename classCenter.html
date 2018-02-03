@@ -9,10 +9,11 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_gl580x89z15lv7vi.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/classCenter.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/classCenter.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,38 +31,34 @@
 
 <body>
     <!-- 顶部 -->
-    <div class="container-fluid top">
-        <div class="container containerTop">
-            <nav class="navbar">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
+    <header class="navbar navbar-inverse navbar-demo navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand logo" href="./index.html"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="./index.html">首页</a></li>
-                        <li class="active"><a href="#">正在直播<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">课程中心</a></li>
-                        <!-- <li><a href="#">讲师中心</a></li> -->
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- <li><a href="#">购物车</a></li> -->
-                        <li><a href="./login01.html" id="login">登录</a></li>
-                        <li><a href="#">注册</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-
-                <!-- /.container-fluid -->
-            </nav>
+                <a href="./index.html" class="navbar-brand">
+                    <img src="./images/logofff.png" alt="">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./testLivePC.html">直播</a></li>
+                    <li><a href="./classCenter.html">课程中心</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./login01.html"><span class="iconfont icon-gerenzhongxin navicon"></span><span id="login">登录</span></a></li>
+                    <li><a href="#">注册</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </header>
     <!-- 顶部END -->
-    <div class="container-fluid noPlPr">
+    <div class="container-fluid noPlPr pt86">
         <img src="./images/banner1.jpg" alt="">
     </div>
     <!-- 课程列表 -->
@@ -73,6 +70,46 @@
     </div>
 
     <!-- 课程列表 END-->
+    <!-- footer -->
+    <div class="bgfff">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="footer-link">
+                        <a href="javascript:;">关于我们</a>
+                        <a href="javascript:;">联系我们</a>
+                        <a href="javascript:;">意见反馈</a>
+                    </div>
+                    <p class="footer-copyright">©&nbsp;2018&nbsp;xinxueshuo.cn&nbsp;京ICP备&nbsp;16031987号-1</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="theThreePartLink">
+                        <p class="text-center">
+                            <a href="javascript:;" class="weChat iconfont icon-unie655" title="微信">
+                                <i class="weChat-pic"></i>
+                            </a>
+                        </p>
+                        <p class="text-center weChat-desc">官方公众号</p>
+                    </div>
+                    <div class="theThreePartLink">
+                        <p class="text-center">
+                            <a href="https://www.linkedin.com/in/newschool-insight-b96319139" target="_" class="weChat iconfont icon-linkedin0" title="领英">
+                            </a>
+                        </p>
+                        <p class="text-center weChat-desc">官方领英</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer END-->
+    <!-- backtoTop -->
+    <div class="backtoTop animated" id="backtoTop">
+        <a href="javascript:;" class="toTop">
+            <span class="iconfont icon-icon3"></span>
+        </a>
+    </div>
+    <!-- backtoTop END-->
 </body>
 
 </html>
@@ -80,4 +117,5 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/config.js"></script>
 <script src="./js/jquery.cookie.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/classCenter.js"></script>
