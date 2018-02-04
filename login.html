@@ -1,115 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>新学说课堂-用户登录</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/login.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新学说-登录</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_562159_oz807u6drlgfd2t9.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        @font-face {
-            font-family: 'Glyphicons Halflings';
-            src: url('../fonts/glyphicons-halflings-regular.eot');
-            src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-        }
-    </style>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
-    <!-- 顶部 -->
-    <div class="container-fluid top">
-        <div class="container containerTop">
-            <nav class="navbar">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-              </button>
-                    <a class="navbar-brand logo" href="./index.html"></a>
+    <div class="container-fluid noPlPr ">
+        <!-- 顶部 -->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <a href="./index.html" class="logo"><img src="./images/logo000.png" alt=""></a>
+                        <!-- <div class="logoDesc">
+                            <p>新学说课堂</p>
+                            <p>NSI CLASS</p>
+                        </div> -->
+                    </div>
+                    <div class="col-md-3 col-xs-6 col-md-offset-6">
+                        <p class="welcome">您好，欢迎光临新学说国际教育学院！<a href="#">请登录</a></p>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="./index.html">首页</a></li>
-                        <li class="active"><a href="./live.html">正在直播<span class="sr-only">(current)</span></a></li>
-                        <li><a href="./classCenter.html">课程中心</a></li>
-                        <!-- <li><a href="#">讲师中心</a></li> -->
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- <li><a href="#">购物车</a></li> -->
-                        <li><a href="./login.html" id="login">登录</a></li>
-                        <li><a href="#">注册</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-
-                <!-- /.container-fluid -->
-            </nav>
-        </div>
-    </div>
-    <!-- 顶部END -->
-    <!-- banner -->
-    <div class="container-fluid">
-        <img src="./images/banner1.jpg" alt="">
-    </div>
-    <!-- banner END-->
-    <div class="container mt40 mb50">
-        <!-- <form class="form-signin">
-            <h2 class="form-signin-heading">新学说课堂-登录</h2>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="username" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="password" class="form-control" placeholder="Password" required>
-            <div class="checkbox">
-                <label>
-            <input type="checkbox" value="remember-me"> 记住我
-          </label>
-            </div>
-            <input type="button" id="loginButton" class="btn btn-lg btn-primary btn-block" value="登 录">
-        </form> -->
-        <div class="row content">
-            <div class="col-lg-6 col-md-6 col-xs-12 picContainer">
-                <img src="./images/login_pic.jpg" alt="">
-            </div>
-            <div class="col-lg-6 col-md-6 col-xs-12 loginContainer">
-                <form action="" class="loginBox">
-                    <div class="emailBox clearfix">
-                        <label class="login_bg" for="username"></label>
-                        <span class="line"></span>
-                        <input type="text" placeholder="请输入邮箱" id="username" class="username" name="email">
-                    </div>
-                    <div class="pwdBox clearfix">
-                        <label class="login_bg pwd_bg" for="password"></label>
-                        <span class="line pwd_line"></span>
-                        <input type="password" placeholder="请输入密码" id="password" class="password">
-                    </div>
-                    <div class="checkbox">
-                        <label for="rember_me"> 
-                            <input type="checkbox" name="" id="rember_me">记住密码
-                        </label>
-                    </div>
-                    <div class="loginBtnBox">
-                        <input type="button" value="立即登录" class="btn btn-primary btn-block loginBtn" id="loginButton">
-                    </div>
-                    <div class="other text-right">
-                        <a href="#">忘记密码</a>
-                    </div>
-                    <!-- <div class="pwdBox"></div> -->
-                </form>
             </div>
         </div>
+        <!-- 顶部END -->
+        <!-- wrap -->
+        <div class="wrap ptb50lr15">
+            <div class="container wrap-container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 text-center">
+                        <img src="./images/loginWrap.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="loginBox" id="loginBox">
+                            <p class="error_tips" id="error_tips"><span class="iconfont icon-icon tips"></span><span id="tipsTxt" class="tipsTxt"></span></p>
+                            <h4 class="clearfix mb5">学员登录 <a href="javascript:;" class="fr" id="registerNewAccount">注册新账号</a></h4>
+                            <form action="">
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-yonghutouxiang" for="username"></label>
+                                    <input type="text" placeholder="邮箱账号" id="username" class="username" name="email">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-mima" for="username"></label>
+                                    <input type="password" placeholder="密码" id="password" class="password">
+                                </div>
+                                <p class="text-right forget"><a href="javascript:;">忘记密码?</a></p>
+                                <button type="button" id="loginButton" class="loginButton">登录</button>
+                            </form>
+                        </div>
+                        <div class="loginBox registerBox" id="registerBox">
+                            <p class="error_tips" id="registerError"><span class="iconfont icon-icon tips"></span><span class="tipsTxt" id="registerTips"></span></p>
+                            <h4 class="clearfix mb5">新学员注册 <a href="javascript:;" class="fr" id="login">登录账号</a></h4>
+                            <form action="">
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-tubiao209" for="username"></label>
+                                    <input type="text" placeholder="邮箱账号" id="registerEmail" class="username" autofocus>
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-idcard" for="username"></label>
+                                    <input type="text" placeholder="姓名" id="registerName" class="inputStyle">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-zuzhijigou" for="username"></label>
+                                    <input type="text" placeholder="所属机构" id="registerInstution" class="inputStyle">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-suoshuzhiwei" for="username"></label>
+                                    <input type="text" placeholder="职位" id="registerJob" class="inputStyle">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-shouji" for="username"></label>
+                                    <input type="text" placeholder="手机号码" id="registerPhone" class="inputStyle">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-mima" for="username"></label>
+                                    <input type="password" placeholder="密码" id="registerPassword" class="inputStyle">
+                                </div>
+                                <div class="form_item">
+                                    <label class="inputlogo iconfont icon-mima" for="username"></label>
+                                    <input type="password" placeholder="确认密码" id="registerConfirmPassword" class="inputStyle">
+                                </div>
+                                <button type="button" id="registerLoginButton" class="loginButton">注册</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- wrap END-->
+        <!-- footer -->
+        <div class="bgfff">
+            <div class="container footer text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-link">
+                            <a href="javascript:;">关于我们</a>
+                            <a href="javascript:;">联系我们</a>
+                            <a href="javascript:;">意见反馈</a>
+                        </div>
+                        <p class="footer-copyright">©&nbsp;2018&nbsp;xinxueshuo.cn&nbsp;京ICP备&nbsp;16031987号-1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer END-->
     </div>
-    <!-- /container -->
-
 </body>
 
 </html>
