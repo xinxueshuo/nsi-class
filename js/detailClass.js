@@ -39,7 +39,7 @@ function watchNow() {
                 // console.log(msg.msg)
                 var $login = $("#login")
                 if ($.cookie('username') === undefined) {
-                    $login.text("未登录")
+                    $login.text("请登录 / 注册")
                 } else {
                     window.location.href = "https://live.polyv.cn/watch/149406?" + msg.msg
                 }
@@ -152,6 +152,7 @@ $(function() {
         } else {
             buyNow.on("click", function() {
                 alert("请先登录")
+                window.location.href = "./login.html"
                 return false;
             })
         }
