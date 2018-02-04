@@ -65,3 +65,10 @@
     position: relative;
     top: -2px;
 }
+
+@media (max-width:415px) {
+    .footer-link,
+    .footer-copyright {
+        text-align: center;
+    }
+}
