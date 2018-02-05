@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_564697_s5gmnpbab949rudi.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/personalCenter.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,7 @@
 
 <body>
     <!-- 顶部 -->
-    <header class="navbar navbar-inverse navbar-demo navbar-fixed-top">
+    <header class="navbar navbar-default navbar-demo navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -40,13 +40,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="./index.html" class="navbar-brand">
-                    <img src="./images/logofff.png" alt="">
+                    <img src="./images/logo000.png" alt="">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="./index.html">首页</a></li>
-                    <li><a href="./testLivePC.html">直播</a></li>
+                    <li><a href="./testLivePC.html">正在直播</a></li>
                     <li><a href="./classCenter.html">课程中心</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -64,10 +64,10 @@
     <!-- banner END-->
 
     <!-- container -->
-    <div class="container ptb30lr15">
+    <div class="container ptb50lr15 minHeight500">
         <div class="row">
             <div class="col-md-2">
-                <ul class="myLable" id="myLable">
+                <ul class="myLable clearfix" id="myLable">
                     <li><a href="javascript:;" class="active"><i class="iconfont icon-kechengbiao"></i>我的课程</a></li>
                     <li><a href="javascript:;"><i class="iconfont icon-shuzishurukuang"></i>课程购买码</a></li>
                     <li><a href="javascript:;"><i class="iconfont icon-lianxikefu"></i>联系我们</a></li>
@@ -77,19 +77,61 @@
                 <div class="rightBox" id="rightBox">
                     <div class="myClass">
                         <div class="row">
-                            <div class="col-md-3">111</div>
-                            <div class="col-md-3"></div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="CourseContainer">
+                                    <a href="./detailLesson.html" target="_">
+                                        <div class="Course Course-up">
+                                            <img src="./images/CourseImage05.jpg" alt="">
+                                            <!-- <div class="Couse_title">
+                                                    <span class="Couse_subject">人力资源</span>
+                                                    <span class="Couse_subject">管理</span>
+                                                </div> -->
+                                        </div>
+                                        <!-- <div class="Course Course-mid"><img src="./images/CourseImage05.jpg" alt=""></div>
+                                        <div class="Course Course-down"><img src="./images/CourseImage05.jpg" alt=""></div> -->
+                                    </a>
+                                    <div class="CourseInfo">
+                                        <p class="mtb5  oneline"><span class="CourseName">国际学校人力资源与构建</span></p>
+                                        <p class="mtb5 twoline"><span class="CourseDesc">一站式解决国际化学校运营各层面人才职业培训和能力提升</span></p>
+                                        <!-- <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="CourseContainer">
+                                    <a href="./detailLesson.html" target="_">
+                                        <div class="Course">
+                                            <img src="./images/CourseImage04.jpg" alt="">
+                                            <!-- <div class="Couse_title">
+                                                    <span class="Couse_subject">发展</span>
+                                                </div> -->
+                                        </div>
+                                    </a>
+                                    <div class="CourseInfo">
+                                        <p class="mtb5  oneline"><span class="CourseName">培训与发展</span></p>
+                                        <p class="mtb5 twoline"><span class="CourseDesc">一站式解决国际化学校运营各层面人才职业培训和能力提升</span></p>
+                                        <!-- <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p> -->
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-3"></div>
                             <div class="col-md-3"></div>
                         </div>
                     </div>
                     <div class="classBuyCode">
                         <form action="">
-                            <input type="text" placeholder="请填写课程码" id="code">
+                            <input type="text" placeholder="请填写课程购买码" id="code">
                             <button type="button" id="btn" class="confirm">确认</button>
                         </form>
                     </div>
-                    <div class="connectUs">333</div>
+                    <div class="connectUs">
+                        <p>中国办公室：<span>北京市西城区新风街2号天成科技大厦A座1006</span></p>
+                        <p>电话：<span>010-52468286</span></p>
+                        <p>手机：<span>15010927730</span></p>
+                        <p>邮箱：<span>info@xinxueshuo.cn</span></p>
+                        <p>美国办公室：<span>德克萨斯州 奥斯丁市</span></p>
+                        <p>邮箱：<span>dbarrutia@xinxueshuo.cn</span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,7 +139,7 @@
     <!-- container END-->
 
     <!-- footer -->
-    <!-- <div class="bgfff">
+    <div class="bgfff topShadow">
         <div class="container footer">
             <div class="row">
                 <div class="col-md-9 col-sm-9 col-xs-12">
@@ -127,7 +169,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- footer END-->
     <!-- backtoTop -->
     <div class="backtoTop animated" id="backtoTop">

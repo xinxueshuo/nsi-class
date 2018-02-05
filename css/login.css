@@ -41,6 +41,7 @@ body {
 
 .wrap {
     background: url("../images/regist_topshadow.png") repeat-x;
+    min-height: 505px;
 }
 
 .loginBox {
@@ -73,10 +74,6 @@ body {
     color: #666;
     font-weight: bold;
     line-height: 30px;
-}
-
-.loginBox>h4>a {
-    font-weight: normal;
 }
 
 .loginBox>h4>a:hover {
