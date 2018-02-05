@@ -30,6 +30,10 @@
     padding-right: 15px;
 }
 
+.navbar-right>li {
+    padding-right: 0;
+}
+
 .navbar-nav>li>a {
     display: inline-block;
     font-size: 17px;
@@ -46,6 +50,13 @@
         height: 50px;
         line-height: 50px;
         padding-left: 0;
+    }
+}
+
+@media(max-width:996px) {
+    .navbar-nav>li {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

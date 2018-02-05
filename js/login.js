@@ -251,8 +251,39 @@ $(function() {
     })
 
     btn.on("click", function() {
+        var emailValue = $("#registerEmail").val(),
+            nameValue = $("#registerName").val(),
+            instutionValue = $("#registerInstution").val(),
+            jobValue = $("#registerJob").val(),
+            phoneValue = $("#registerPhone").val(),
+            pwdValue01 = $("#registerPassword").val(),
+            pwdValue02 = $("#registerConfirmPassword").val(),
+            data = {
+                'Email': emailValue,
+                'Name': nameValue,
+                'company': instutionValue,
+                'position': jobValue,
+                'Passwd01': pwdValue02,
+                'phone': phoneValue
+            }
         if (emailFlag && nameFlag && instutionFlag && jobFlag && telFlag && pwdFlag && confirmPwdFlag) {
-            console.log("注册成功")
+            $.ajax({
+                type: "get",
+                async: true,
+                traditional: true,
+                dataType: "jsonp",
+                jsonp: "Callback",
+                data: data,
+                url: 'http://' + changeUrl.address + '/User_api?whereFrom=register',
+                success: function(msg) {
+                    alert("注册成功，请查看您的邮箱以激活账号")
+                    window.location.reload()
+                },
+                error: function() {
+                    console.log("error")
+                }
+            })
+
         } else {
             console.log("注册失败")
         }

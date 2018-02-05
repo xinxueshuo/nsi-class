@@ -141,7 +141,8 @@ $(function() {
                     data: data,
                     url: 'http://' + changeUrl.address + '/Payment_api?whereFrom=WeChatPayment',
                     success: function(msg) {
-                        // console.log(msg.data)
+                        console.log(msg.CoursePrice)
+                        $("#orderDesc-price").text(msg.CoursePrice)
                         $("#qrCode").css("background-image", "url(" + msg.data + ")")
                     },
                     error: function() {

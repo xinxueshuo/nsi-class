@@ -4,7 +4,7 @@ $(function() {
         if ($.cookie('username') === undefined) {
             $login.text("请登录 / 注册")
         } else {
-            $login.text($.cookie('username'))
+            $login.text($.cookie('User_TureName'))
         }
     }
     isLogin();
