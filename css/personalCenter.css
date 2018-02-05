@@ -1,0 +1,67 @@
+.myLable {
+    list-style: none;
+}
+
+.myLable li {
+    height: 48px;
+    width: 160px;
+    margin: 0 auto 8px;
+}
+
+.myLable li a {
+    position: relative;
+    display: block;
+    height: 48px;
+    font-size: 16px;
+    line-height: 48px;
+    color: #787d82;
+    padding-left: 64px;
+    text-align: left;
+}
+
+.myLable li a.active {
+    color: #fff;
+    background: rgba(240, 20, 20, .8);
+    border-radius: 8px 0 0 8px;
+}
+
+.myLable li a.active::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 24px solid #fff;
+    border-bottom: 24px solid #fff;
+    border-left: 15px solid transparent;
+}
+
+.myLable li a.active i {
+    color: #FFF;
+}
+
+.myLable li a i {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    font-size: 28px;
+    color: #93999f;
+    line-height: 48px;
+}
+
+.classBuyCode,
+.connectUs {
+    display: none;
+}
+
+.rightBox {
+    position: relative;
+}
+
+.rightBox>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

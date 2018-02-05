@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>新学说国际教育学院</title>
-    <!-- Bootstrap -->
+    <title>新学说国际教育学院-个人中心</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_gl580x89z15lv7vi.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_564697_s5gmnpbab949rudi.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/classCenter.css">
+    <link rel="stylesheet" href="./css/personalCenter.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,11 +34,11 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a href="./index.html" class="navbar-brand">
                     <img src="./images/logofff.png" alt="">
                 </a>
@@ -47,7 +46,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="./index.html">首页</a></li>
-                    <li><a href="./testLivePC.html">正在直播</a></li>
+                    <li><a href="./testLivePC.html">直播</a></li>
                     <li><a href="./classCenter.html">课程中心</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -58,20 +57,47 @@
         </div>
     </header>
     <!-- 顶部END -->
+    <!-- banner -->
     <div class="container-fluid noPlPr pt66">
         <img src="./images/banner1.jpg" alt="">
     </div>
-    <!-- 课程列表 -->
-    <div class="container-fluid">
-        <div class="container ptb50lr15">
-            <div class="row" id="CourseContainer">
+    <!-- banner END-->
+
+    <!-- container -->
+    <div class="container ptb30lr15">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="myLable" id="myLable">
+                    <li><a href="javascript:;" class="active"><i class="iconfont icon-kechengbiao"></i>我的课程</a></li>
+                    <li><a href="javascript:;"><i class="iconfont icon-shuzishurukuang"></i>课程购买码</a></li>
+                    <li><a href="javascript:;"><i class="iconfont icon-lianxikefu"></i>联系我们</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div class="rightBox" id="rightBox">
+                    <div class="myClass">
+                        <div class="row">
+                            <div class="col-md-3">111</div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    <div class="classBuyCode">
+                        <form action="">
+                            <input type="text" placeholder="请填写课程码" id="code">
+                            <button type="button" id="btn" class="confirm">确认</button>
+                        </form>
+                    </div>
+                    <div class="connectUs">333</div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- container END-->
 
-    <!-- 课程列表 END-->
     <!-- footer -->
-    <div class="bgfff">
+    <!-- <div class="bgfff">
         <div class="container footer">
             <div class="row">
                 <div class="col-md-9 col-sm-9 col-xs-12">
@@ -101,7 +127,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- footer END-->
     <!-- backtoTop -->
     <div class="backtoTop animated" id="backtoTop">
@@ -118,4 +144,4 @@
 <script src="./js/config.js"></script>
 <script src="./js/jquery.cookie.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/classCenter.js"></script>
+<script src="./js/personalCenter.js"></script>
