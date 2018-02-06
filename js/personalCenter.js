@@ -39,11 +39,21 @@ $(function() {
             // dataType: "json",
             data: data,
             url: 'http://' + changeUrl.address + '/Payment_api?whereFrom=CheckPurchaseCode',
-            success: function(msg) {
-                console.log("success" + msg)
+            success: function(data) {
+                if (data.msg > 0) {
+                    $("#myAlertSuccess").fadeIn(100)
+                    $("#myAlertError01").fadeOut(100)
+                    $("#myAlertError02").fadeOut(100)
+                } else {
+                    $("#myAlertError02").fadeIn(100)
+                    $("#myAlertSuccess").fadeOut(100)
+                    $("#myAlertError01").fadeOut(100)
+                }
             },
             error: function() {
-                console.log("error")
+                $("#myAlertError01").fadeIn(100)
+                $("#myAlertError02").fadeOut(100)
+                $("#myAlertSuccess").fadeOut(100)
             }
         })
     })

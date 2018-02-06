@@ -160,4 +160,44 @@ $(function() {
 
     }
     buy()
+
+
+    //判断是否购买成功
+    function checkPaymentState() {
+        var buyNow = $("#buyNow")
+        buyNow.on("click", function() {
+            setTimeout(refresh, 3000)
+
+            function refresh() {
+                var timer = setInterval(paymentState, 3000)
+
+                function paymentState() {
+                    var data = {
+                        'UserMail': $.cookie('username'),
+                        'ClassId': Id
+                    }
+                    $.ajax({
+                        type: "POST",
+                        data: data,
+                        dataType: "json",
+                        url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
+                        success: function(data) {
+                            if (data.msg > 0) {
+                                clearInterval(timer)
+                                alert("支付成功")
+                            } else {
+                                alert("支付失败")
+                            }
+                        },
+                        error: function() {
+                            // console.log("支付失败")
+                        }
+                    })
+                }
+            }
+        })
+    }
+
+    checkPaymentState()
+
 })

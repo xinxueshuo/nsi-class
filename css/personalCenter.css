@@ -65,6 +65,13 @@
     padding: 30px 20px;
 }
 
+.myAlertSuccess,
+.myAlertError {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
 .classBuyCode>form>input[type=text] {
     height: 50px;
     width: 50%;
@@ -112,16 +119,16 @@
     line-height: 40px;
 }
 
-
-/* .rightBox {
+.rightBox {
     position: relative;
 }
 
 .rightBox>div {
     position: absolute;
+    width: 100%;
     left: 0;
     top: 0;
-} */
+}
 
 
 /* Course 课程列表*/
@@ -247,10 +254,22 @@
     .minHeight500 {
         min-height: auto;
     }
+    .rightBox>div {
+        position: static
+    }
 }
 
 @media(max-width:415px) {
     .classBuyCode>form>input[type=text] {
         width: auto;
+    }
+}
+
+@media(max-width:321px) {
+    .classBuyCode>form {
+        padding: 30px 0;
+    }
+    .confirm {
+        padding: 0 20px;
     }
 }

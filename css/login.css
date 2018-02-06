@@ -41,7 +41,7 @@ body {
 
 .wrap {
     background: url("../images/regist_topshadow.png") repeat-x;
-    min-height: 505px;
+    min-height: 620px;
 }
 
 .loginBox {
@@ -53,6 +53,16 @@ body {
 
 .registerBox {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media(max-width:769px) {
+    .registerBox {
+        position: static;
+    }
 }
 
 .tips {
