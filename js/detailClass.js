@@ -95,7 +95,7 @@ $(function() {
                         $("#qrCode").css("background-image", "url(" + msg.data + ")")
                     },
                     error: function() {
-                        window.location.href = "./errorPage.html"
+                        console.log("error")
                     }
                 })
             })
@@ -180,7 +180,7 @@ $(function() {
                 }
             },
             error: function() {
-                window.location.href = "./errorPage.html"
+                console.log("error")
             }
         })
 
