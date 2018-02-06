@@ -75,7 +75,7 @@ $(function() {
         contentType: "application/json;charset=UTF-8",
         url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=Search_Course',
         success: function(msg) {
-            console.log(msg.data)
+            // console.log(msg.data)
             for (var i = 0; i < 4; i++) {
                 CourseContainer.append(`
                         <div class="col-md-3 col-sm-6">

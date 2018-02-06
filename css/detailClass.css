@@ -85,13 +85,20 @@
     text-align: center;
     color: #FFF;
     border: 0;
-    background: linear-gradient(90deg, #86eff6 0, #2990f0 100%);
     transition: all .5s;
     border-radius: 0;
     outline: none;
     padding: 0 10px;
     margin-left: 5px;
     border-radius: 4px;
+}
+
+.notAllow {
+    background: linear-gradient(90deg, #b3b5b5 0, #818182 100%);
+}
+
+.allow {
+    background: linear-gradient(90deg, #86eff6 0, #2990f0 100%);
 }
 
 .lesson_content>.buyNow>span,

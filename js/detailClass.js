@@ -1,54 +1,3 @@
-function buyNow() {
-    var $buyNow = $("#buyNow")
-    $buyNow.on("click", function() {
-        var data = {
-            'ClassId': $("#ClassId").text(),
-            'UserMail': $.cookie('username')
-        }
-        $.ajax({
-            type: "get",
-            async: false,
-            traditional: true,
-            data: data, //提交的参数
-            url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=BuyClass',
-            dataType: "jsonp", //数据类型为jsonp  
-            jsonp:   "Callback", //服务端用于接收callback调用的function名的参数  
-            success: function(msg) {
-                console.log("Buy:" + msg)
-            }
-        })
-    })
-}
-// buyNow()
-
-function watchNow() {
-    var $watchNow = $("#watchNow")
-    $watchNow.on("click", function() {
-        var data = {
-            'userid': $.cookie('username')
-        }
-        $.ajax({
-            type: "get",
-            async: false,
-            traditional: true,
-            data: data, //提交的参数
-            url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=getLiveUrl',
-            dataType: "jsonp", //数据类型为jsonp  
-            jsonp:   "Callback", //服务端用于接收callback调用的function名的参数  
-            success: function(msg) {
-                // console.log(msg.msg)
-                var $login = $("#login")
-                if ($.cookie('username') === undefined) {
-                    $login.text("请登录 / 注册")
-                } else {
-                    window.location.href = "https://live.polyv.cn/watch/149406?" + msg.msg
-                }
-            }
-        })
-    })
-}
-watchNow()
-
 function isLogin() {
     var $login = $("#login")
     if ($.cookie('username') === undefined) {
@@ -146,7 +95,7 @@ $(function() {
                         $("#qrCode").css("background-image", "url(" + msg.data + ")")
                     },
                     error: function() {
-                        console.log("error")
+                        window.location.href = "./errorPage.html"
                     }
                 })
             })
@@ -169,7 +118,8 @@ $(function() {
             setTimeout(refresh, 3000)
 
             function refresh() {
-                var timer = setInterval(paymentState, 3000)
+                var timer = setInterval(paymentState, 3000),
+                    cancle = $("#cancle")
 
                 function paymentState() {
                     var data = {
@@ -185,8 +135,9 @@ $(function() {
                             if (data.msg > 0) {
                                 clearInterval(timer)
                                 alert("支付成功")
+                                window.location.reload()
                             } else {
-                                alert("支付失败")
+                                // alert("支付失败")
                             }
                         },
                         error: function() {
@@ -194,10 +145,45 @@ $(function() {
                         }
                     })
                 }
+                cancle.on("click", function() {
+                    clearInterval(timer)
+                })
             }
         })
     }
 
     checkPaymentState()
 
+    // 立即观看
+    function watchNow() {
+        var $watchNow = $("#watchNow"),
+            data = {
+                'UserMail': $.cookie('username'),
+                'ClassId': Id
+            }
+        $.ajax({
+            type: "post",
+            data: data, //提交的参数
+            url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
+            dataType: "json",
+            success: function(msg) {
+                if (msg.msg < 0) {
+                    $watchNow.addClass("notAllow")
+                    $watchNow.click(function() {
+                        alert("请先购买该课程")
+                    })
+                } else {
+                    $watchNow.addClass("allow")
+                    $watchNow.click(function() {
+                        window.location.href = "./live.html?Id=" + Id
+                    })
+                }
+            },
+            error: function() {
+                window.location.href = "./errorPage.html"
+            }
+        })
+
+    }
+    watchNow()
 })

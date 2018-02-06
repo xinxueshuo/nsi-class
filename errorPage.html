@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面出错啦！</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="errorBox mt45">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="./images/errorImg.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">页面将于<span id="second">5</span>秒跳转至<a href="./index.html">首页</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+    var second = $("#second").text();
+    var timer = setInterval(function() {
+        second--;
+        $("#second").text(second)
+        if (second == 0) {
+            window.location.href = "./index.html"
+        }
+    }, 1000)
+</script>

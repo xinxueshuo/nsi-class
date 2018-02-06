@@ -591,6 +591,12 @@
     }
 }
 
+@media(max-width:991px) {
+    .teacherDesc {
+        margin-top: 15px;
+    }
+}
+
 @media (max-width:769px) {
     .champion {
         left: 300px;

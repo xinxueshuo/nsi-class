@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_560175_05y2k7t8v3sug14i.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_gl580x89z15lv7vi.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/detailClass.css">
+    <link rel="stylesheet" href="./css/common.css?v=02061440">
+    <link rel="stylesheet" href="./css/nav.css?v=02061440">
+    <link rel="stylesheet" href="./css/footer.css?v=02061440">
+    <link rel="stylesheet" href="./css/detailClass.css?v=02061440">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="./index.html">首页</a></li>
-                    <li><a href="./testLivePC.html">正在直播</a></li>
+                    <li><a href="./live.html?Id=10001">正在直播</a></li>
                     <li><a href="./classCenter.html">课程中心</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -79,7 +79,7 @@
                             <p class="score">评分：<span>9.9</span>分&nbsp;&nbsp;&nbsp;<i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i></p>
                             <p class="price">￥<span id="CoursePrice" class="CoursePrice">8888</span><small>(您购买的是整套课程，暂不单售)</small></p>
                             <button class="buyNow" id="buyNow" data-toggle="modal" data-target="#myModal"><span class="iconfont icon-gouwuche3"></span>购买整套</button>
-                            <button class="watchNow disabled" id="watchNow"><span class="iconfont icon-bofang1"></span>立即观看</button>
+                            <button class="watchNow disabled notAllow " id="watchNow"><span class="iconfont icon-bofang1"></span>立即观看</button>
                         </div>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="modal-footer">
                     <p class="dis_ib problem"><span class="iconfont icon-wentidingdan"></span>支付遇到问题？请联系新学说客服 <b>010-52468286</b></p>
-                    <button type="button" class="btn btn-default cancle" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default cancle" data-dismiss="modal" id="cancle">取消</button>
                     <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
                 </div>
             </div>
@@ -226,7 +226,7 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/common.js"></script>
+<script src="./js/common.js?v=02061440"></script>
 <script src="./js/config.js"></script>
 <script src="./js/jquery.cookie.js"></script>
-<script src="./js/detailClass.js"></script>
+<script src="./js/detailClass.js?v=02061440"></script>
