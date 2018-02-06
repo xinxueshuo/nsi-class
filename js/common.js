@@ -2,7 +2,7 @@ $(function() {
     function isLogin() {
         var $login = $("#login")
         if ($.cookie('username') === undefined) {
-            $login.text("请登录 / 注册")
+            $login.text("登录 / 注册")
         } else {
             $login.text($.cookie('User_TureName'))
         }
