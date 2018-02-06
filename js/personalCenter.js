@@ -30,17 +30,17 @@ $(function() {
             checkCode = RandomNumBoth(17, 33),
             checkNum = checkCode + checkDate,
             data = {
-                'PurchaseCode': codeValue,
-                'sign': checkNum,
+                'code': codeValue,
+                // 'sign': checkNum,
                 'UserMail': $.cookie('username')
             }
         $.ajax({
             type: "get",
             // dataType: "json",
             data: data,
-            url: 'http://' + changeUrl.address + '/Payment_api?whereFrom=CheckPurchaseCode',
+            url: 'http://' + changeUrl.address + '/Class_ActivationCode?whereFrom=courseCode',
             success: function(data) {
-                if (data.msg > 0) {
+                if (data.code > 0) {
                     $("#myAlertSuccess").fadeIn(100)
                     $("#myAlertError01").fadeOut(100)
                     $("#myAlertError02").fadeOut(100)

@@ -1,10 +1,13 @@
 $(function() {
     function isLogin() {
-        var $login = $("#login")
+        var $login = $("#login"),
+            personalClass = $("#personalClass")
         if ($.cookie('username') === undefined) {
             $login.text("登录 / 注册")
+            personalClass.css("display", "none")
         } else {
             $login.text($.cookie('User_TureName'))
+            personalClass.css("display", "inline-block")
         }
     }
     isLogin();
