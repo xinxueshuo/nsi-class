@@ -113,41 +113,64 @@ $(function() {
 
     //判断是否购买成功
     function checkPaymentState() {
-        var buyNow = $("#buyNow")
-        buyNow.on("click", function() {
-            setTimeout(refresh, 3000)
+        var buyNow = $("#buyNow"),
+            data = {
+                'UserMail': $.cookie('username'),
+                'ClassId': Id
+            }
+            //先判断是否已购买该课程
+        $.ajax({
+            type: "POST",
+            data: data,
+            dataType: "json",
+            url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
+            success: function(data) {
+                if (data.msg > 0) {
+                    buyNow.click(function() {
+                        alert("您已购买过该课程，请勿重复购买")
+                        return false;
+                    })
+                } else {
+                    buyNow.on("click", function() {
+                        setTimeout(refresh, 3000)
 
-            function refresh() {
-                var timer = setInterval(paymentState, 3000),
-                    cancle = $("#cancle")
+                        function refresh() {
+                            var timer = setInterval(paymentState, 3000),
+                                cancle = $("#cancle")
 
-                function paymentState() {
-                    var data = {
-                        'UserMail': $.cookie('username'),
-                        'ClassId': Id
-                    }
-                    $.ajax({
-                        type: "POST",
-                        data: data,
-                        dataType: "json",
-                        url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
-                        success: function(data) {
-                            if (data.msg > 0) {
-                                clearInterval(timer)
-                                alert("支付成功")
-                                window.location.reload()
-                            } else {
-                                // alert("支付失败")
+                            function paymentState() {
+                                var data = {
+                                    'UserMail': $.cookie('username'),
+                                    'ClassId': Id
+                                }
+                                $.ajax({
+                                    type: "POST",
+                                    data: data,
+                                    dataType: "json",
+                                    url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
+                                    success: function(data) {
+                                        if (data.msg > 0) {
+                                            clearInterval(timer)
+                                            alert("支付成功")
+                                            window.location.reload()
+                                        } else {
+                                            // alert("支付失败")
+                                        }
+                                    },
+                                    error: function() {
+                                        // console.log("支付失败")
+                                    }
+                                })
                             }
-                        },
-                        error: function() {
-                            // console.log("支付失败")
+                            cancle.on("click", function() {
+                                clearInterval(timer)
+                            })
                         }
                     })
                 }
-                cancle.on("click", function() {
-                    clearInterval(timer)
-                })
+            },
+            error: function() {
+                // console.log("支付失败")
             }
         })
     }
