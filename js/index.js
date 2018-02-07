@@ -49,6 +49,7 @@ $(function() {
     })
 })
 
+//讲师层样式
 $(function() {
     var flag = true,
         aBox = $(".lecturer")
