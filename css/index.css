@@ -639,6 +639,10 @@
     .enterPlay>span {
         font-size: 60px;
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
 }
 
 @media (max-width:376px) {

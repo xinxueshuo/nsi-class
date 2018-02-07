@@ -28,41 +28,64 @@ $(function() {
             'UserMail': $.cookie('username'),
             'ClassId': Id
         }
+    var screenWidth = $(window).width()
+    var screenHeight = $(window).height()
+    if (screenWidth < 768) {
+        $('#mobileHeight').attr('height', screenHeight)
+        $('.mobile').removeClass('bg-wrap container row col-lg-12 col-md-12 col-sm-12 Pd150')
+        $('.mbHide').addClass('hide')
+    }
     $.ajax({
         type: "POST",
         dataType: "json",
         data: data,
+        async: true,
         url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
         success: function(msg) {
-            if (msg.msg < 0) {
+            if (msg.msg <= 0) {
                 alert("请先购买该课程")
                 window.location.href = "./index.html"
+            } else {
+                var obj = $("#mobileHeight"),
+                    mobile = $("#mobile"),
+                    data01 = {
+                        'userid': $.cookie('username')
+                    }
+                $.ajax({
+                    type: "post",
+                    data: data01,
+                    dataType: "json",
+                    async: true,
+                    url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=getLiveUrl',
+                    success: function(msg) {
+                        console.log(msg)
+                        obj.attr("data", "https://live.polyv.cn/watch/149406?" + msg.msg)
+                        mobile.attr("href", "https://live.polyv.cn/watch/149406?" + msg.msg)
+                    },
+                    error: function() {
+                        console.log("error")
+                    }
+                })
             }
         },
         error: function() {
             console.log("error")
         }
     })
-})
 
+})
 $(function() {
-    var obj = $("#obj"),
-        mobile = $("#mobile"),
-        data = {
-            'userid': $.cookie('username')
-        }
-    $.ajax({
-        type: "post",
-        data: data,
-        dataType: "json",
-        url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=getLiveUrl',
-        success: function(msg) {
-            console.log(msg)
-            obj.attr("data", "https://live.polyv.cn/watch/149406?" + msg.msg)
-            mobile.attr("href", "https://live.polyv.cn/watch/149406?" + msg.msg)
-        },
-        error: function() {
-            console.log("error")
-        }
+    var quit = $("#quit")
+
+    function exitLogin() {
+        $.cookie('usertitle', null, { expires: -1, path: '/' });
+        $.cookie('username', null, { expires: -1, path: '/' });
+        $.cookie('User_TureName', null, { expires: -1, path: '/' });
+        $.cookie('userVerifyCode', null, { expires: -1, path: '/' });
+        window.location.href = './index.html'
+    }
+
+    quit.on("click", function() {
+        exitLogin()
     })
 })

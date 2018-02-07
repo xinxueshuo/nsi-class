@@ -76,7 +76,8 @@ $(function() {
     //立即购买
 
     function buy() {
-        var buyNow = $("#buyNow")
+        var buyNow = $("#buyNow"),
+            courseCode = $("#courseCode")
         if ($.cookie('username') !== undefined) {
             buyNow.on("click", function() {
                 // console.log($.cookie('username'))
@@ -101,6 +102,11 @@ $(function() {
             })
         } else {
             buyNow.on("click", function() {
+                alert("请先登录")
+                window.location.href = "./login.html"
+                return false;
+            })
+            courseCode.on("click", function() {
                 alert("请先登录")
                 window.location.href = "./login.html"
                 return false;

@@ -32,8 +32,8 @@
 }
 
 .lesson_content>p {
-    height: 40px;
-    line-height: 40px;
+    height: 34px;
+    line-height: 45px;
     color: rgba(7, 17, 27, 0.7);
     font-weight: 700;
 }
@@ -44,9 +44,9 @@
 
 .lesson_content>.price {
     width: 100%;
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
     color: #f01400;
-    text-indent: 10px;
+    /* text-indent: 10px; */
     font-size: 20px;
     font-weight: 700;
     margin: 5px 0 15px 0;

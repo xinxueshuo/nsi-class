@@ -113,6 +113,7 @@ inputStyle {
     border: 0;
     outline: none;
     font-size: 14px;
+    width: 82%;
 }
 
 .loginButton {
@@ -168,6 +169,8 @@ inputStyle {
 
 .forget {
     margin: 5px 0 10px;
+    color: #999;
+    font-size: 12px;
 }
 
 .forget>a {

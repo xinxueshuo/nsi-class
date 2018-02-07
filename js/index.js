@@ -82,7 +82,7 @@ $(function() {
                 CourseContainer.append(`
                         <div class="col-md-3 col-sm-6">
                             <div class="CourseContainer">
-                                <a href="javascript:;" target="_">
+                                <a href="./detailClass.html?Id=${msg.data[i].Id}" target="_blank">
                                     <div class="Course Course-up">
                                         <img src="${msg.data[i].CoverImage}" alt="">
                                         <div class="state">${msg.data[i].CourseState}</div>
@@ -113,13 +113,6 @@ $(function() {
                         break;
                 }
             }
-
-            var aCourse = $("#CourseContainer").children()
-            aCourse.on("click", function() {
-                var courseId = msg.data[$(this).index()].Id
-                window.location = "./detailClass.html?Id=" + courseId
-            })
-
         },
         error: function(msg) {
             console.log("error:" + msg)
