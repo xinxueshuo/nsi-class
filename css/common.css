@@ -207,8 +207,8 @@
         text-shadow: 0 4px 8px rgba(7, 17, 27, 0.4);
     }
     
-    .minHeight500 {
-        min-height: 500px;
+    .minHeight400 {
+        min-height: 400px;
     }
     
     @media (min-width: 1200px) {

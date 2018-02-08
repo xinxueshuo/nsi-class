@@ -1,3 +1,46 @@
+// 显示的购买课程
+$(function() {
+    var haveBoughtCourse = $("#haveBoughtCourse"),
+        myCourse = $("#myCourse"),
+        notHaveCourse = $("#notHaveCourse"),
+        data = {
+            'UserMail': $.cookie('username')
+        }
+    $.ajax({
+        type: "POST",
+        data: data,
+        dataType: "json",
+        url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=MyCourse',
+        success: function(msg) {
+            // console.log(msg.data[0])
+            if (msg.data.length != 0) {
+                notHaveCourse.css("display", "none")
+            }
+            for (var i = 0; i < msg.data.length; i++) {
+                haveBoughtCourse.append(
+                    `
+                        <div class="col-md-3 col-sm-6">
+                            <div class="CourseContainer">
+                                <a href="./detailClass.html?Id=${msg.data[i].Id}" target="_">
+                                    <div class="Course Course-up">
+                                        <img src="${msg.data[i].CoverImage}" alt="">
+                                    </div>
+                                </a>
+                                <div class="CourseInfo">
+                                    <p class="mtb5  oneline"><span class="CourseName">${msg.data[i].CourseName}</span></p>
+                                    <p class="mtb5 twoline"><span class="CourseDesc" title="${msg.data[i].CourseDescription}">${msg.data[i].CourseDescription}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        `
+                )
+
+            }
+        }
+    })
+})
+
+//tab
 $(function() {
     var aA = $("#myLable").children().children(),
         _index = 0,

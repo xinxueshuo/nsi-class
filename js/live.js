@@ -42,30 +42,34 @@ $(function() {
         async: true,
         url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
         success: function(msg) {
-            if (msg.msg <= 0) {
-                alert("请先购买该课程")
-                window.location.href = "./index.html"
+            if ($.cookie('username') === undefined) {
+                alert("请先登录")
             } else {
-                var obj = $("#mobileHeight"),
-                    mobile = $("#mobile"),
-                    data01 = {
-                        'userid': $.cookie('username')
-                    }
-                $.ajax({
-                    type: "post",
-                    data: data01,
-                    dataType: "json",
-                    async: true,
-                    url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=getLiveUrl',
-                    success: function(msg) {
-                        console.log(msg)
-                        obj.attr("data", "https://live.polyv.cn/watch/149406?" + msg.msg)
-                        mobile.attr("href", "https://live.polyv.cn/watch/149406?" + msg.msg)
-                    },
-                    error: function() {
-                        console.log("error")
-                    }
-                })
+                if (msg.msg <= 0) {
+                    alert("请先购买该课程")
+                    window.location.href = "./detailClass.html?Id=10001"
+                } else {
+                    var obj = $("#mobileHeight"),
+                        mobile = $("#mobile"),
+                        data01 = {
+                            'userid': $.cookie('username')
+                        }
+                    $.ajax({
+                        type: "post",
+                        data: data01,
+                        dataType: "json",
+                        async: true,
+                        url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=getLiveUrl',
+                        success: function(msg) {
+                            console.log(msg)
+                            obj.attr("data", "https://live.polyv.cn/watch/149406?" + msg.msg)
+                            mobile.attr("href", "https://live.polyv.cn/watch/149406?" + msg.msg)
+                        },
+                        error: function() {
+                            console.log("error")
+                        }
+                    })
+                }
             }
         },
         error: function() {
@@ -78,7 +82,7 @@ $(function() {
     var quit = $("#quit")
 
     function exitLogin() {
-        $.cookie('usertitle', null, { expires: -1, path: '/' });
+        $.cookie('member_sign', null, { expires: -1, path: '/' });
         $.cookie('username', null, { expires: -1, path: '/' });
         $.cookie('User_TureName', null, { expires: -1, path: '/' });
         $.cookie('userVerifyCode', null, { expires: -1, path: '/' });

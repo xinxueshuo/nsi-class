@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_gl580x89z15lv7vi.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_564697_s5gmnpbab949rudi.css">
-    <link rel="stylesheet" href="./css/common.css?v=02071022">
-    <link rel="stylesheet" href="./css/nav.css?v=02071022">
-    <link rel="stylesheet" href="./css/footer.css?v=02071022">
-    <link rel="stylesheet" href="./css/personalCenter.css?v=02071022">
+    <link rel="stylesheet" href="./css/common.css?v=02081703">
+    <link rel="stylesheet" href="./css/nav.css?v=02081703">
+    <link rel="stylesheet" href="./css/footer.css?v=02081703">
+    <link rel="stylesheet" href="./css/personalCenter.css?v=02081703">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,6 +45,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./login.html"><span class="iconfont icon-gerenzhongxin navicon"></span><span id="login">登录 / 注册</span></a></li>
                     <li><a href="./personalCenter.html" id="personalClass" class="personalClass">个人中心</a></li>
+                    <li><a href="javascript:;" id="exit" class="exit">退出</a></li>
                 </ul>
             </div>
         </div>
@@ -57,36 +58,30 @@
     <!-- banner END-->
 
     <!-- container -->
-    <div class="container ptb50lr15 minHeight500">
+    <div class="container ptb50lr15">
         <div class="row">
             <div class="col-md-2">
                 <ul class="myLable clearfix" id="myLable">
-                    <li><a href="javascript:;" class="active"><i class="iconfont icon-kechengbiao"></i>我的课程</a></li>
+                    <li><a href="javascript:;" class="active" id="myCourse"><i class="iconfont icon-kechengbiao"></i>我的课程</a></li>
                     <li><a href="javascript:;"><i class="iconfont icon-shuzishurukuang"></i>课程购买码</a></li>
                     <li><a href="javascript:;"><i class="iconfont icon-lianxikefu"></i>联系我们</a></li>
                 </ul>
             </div>
             <div class="col-md-10">
-                <div class="rightBox" id="rightBox">
+                <div class="rightBox minHeight400" id="rightBox">
                     <div class="myClass">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
+                        <div class="row" id="haveBoughtCourse">
+                            <p class="text-center notHaveCourse" id="notHaveCourse">暂无课程</p>
+                            <!-- <div class="col-md-3 col-sm-6">
                                 <div class="CourseContainer">
                                     <a href="./detailLesson.html" target="_">
                                         <div class="Course Course-up">
                                             <img src="./images/CourseImage05.jpg" alt="">
-                                            <!-- <div class="Couse_title">
-                                                    <span class="Couse_subject">人力资源</span>
-                                                    <span class="Couse_subject">管理</span>
-                                                </div> -->
                                         </div>
-                                        <!-- <div class="Course Course-mid"><img src="./images/CourseImage05.jpg" alt=""></div>
-                                        <div class="Course Course-down"><img src="./images/CourseImage05.jpg" alt=""></div> -->
                                     </a>
                                     <div class="CourseInfo">
                                         <p class="mtb5  oneline"><span class="CourseName">国际学校人力资源与构建</span></p>
                                         <p class="mtb5 twoline"><span class="CourseDesc">一站式解决国际化学校运营各层面人才职业培训和能力提升</span></p>
-                                        <!-- <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p> -->
                                     </div>
                                 </div>
                             </div>
@@ -95,20 +90,14 @@
                                     <a href="./detailLesson.html" target="_">
                                         <div class="Course">
                                             <img src="./images/CourseImage04.jpg" alt="">
-                                            <!-- <div class="Couse_title">
-                                                    <span class="Couse_subject">发展</span>
-                                                </div> -->
                                         </div>
                                     </a>
                                     <div class="CourseInfo">
                                         <p class="mtb5  oneline"><span class="CourseName">培训与发展</span></p>
                                         <p class="mtb5 twoline"><span class="CourseDesc">一站式解决国际化学校运营各层面人才职业培训和能力提升</span></p>
-                                        <!-- <p class="mtb5">开课时间：<span class="CourseTime">2018-03-16</span></p> -->
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3"></div>
-                            <div class="col-md-3"></div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="classBuyCode">
@@ -188,5 +177,5 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/config.js"></script>
 <script src="./js/jquery.cookie.js"></script>
-<script src="./js/common.js?v=02071022"></script>
-<script src="./js/personalCenter.js?v=02071022"></script>
+<script src="./js/common.js?v=02081703"></script>
+<script src="./js/personalCenter.js?v=02081703"></script>

@@ -42,7 +42,8 @@
     padding: 15px 10px;
 }
 
-.personalClass {
+.personalClass,
+.exit {
     display: none;
 }
 

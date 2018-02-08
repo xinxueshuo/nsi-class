@@ -187,15 +187,17 @@ $(function() {
     function watchNow() {
         var $watchNow = $("#watchNow"),
             data = {
-                'UserMail': $.cookie('username'),
+                'UserMail': $.cookie('username') ? $.cookie('username') : 0,
                 'ClassId': Id
             }
+        console.log(data)
         $.ajax({
             type: "post",
             data: data, //提交的参数
             url: 'http://' + changeUrl.address + '/Class_User_api?whereFrom=Verification',
             dataType: "json",
             success: function(msg) {
+                console.log(msg.msg)
                 if (msg.msg < 0) {
                     $watchNow.addClass("notAllow")
                     $watchNow.click(function() {

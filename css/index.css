@@ -50,7 +50,8 @@
     padding: 15px 10px;
 }
 
-.personalClass {
+.personalClass,
+.exit {
     display: none;
 }
 
@@ -422,7 +423,7 @@
 
 .lecturer {
     position: relative;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .lecturerBg {

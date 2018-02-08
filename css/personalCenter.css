@@ -123,11 +123,18 @@
     position: relative;
 }
 
-.rightBox>div {
+
+/* .rightBox>div {
     position: absolute;
     width: 100%;
+    height: auto;
     left: 0;
     top: 0;
+} */
+
+.notHaveCourse {
+    font-size: 17px;
+    color: #777
 }
 
 
