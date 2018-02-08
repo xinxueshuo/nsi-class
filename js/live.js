@@ -44,6 +44,7 @@ $(function() {
         success: function(msg) {
             if ($.cookie('username') === undefined) {
                 alert("请先登录")
+                window.location.href = "./login.html"
             } else {
                 if (msg.msg <= 0) {
                     alert("请先购买该课程")

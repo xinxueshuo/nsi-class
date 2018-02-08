@@ -66,16 +66,16 @@ body {
 }
 
 .tips {
-    color: #f60;
+    color: #FFF;
     margin-right: 10px;
 }
 
 .error_tips {
     padding: 5px 10px;
-    border: 1px solid #e5debc;
+    border: 1px solid #b56f6f;
     border-radius: 4px;
-    color: #999;
-    background: #fff7d1;
+    color: #FFF;
+    background: #ff3c3c;
     opacity: 0
 }
 
