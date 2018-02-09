@@ -1,22 +1,24 @@
+// 导航条部分
 $(function() {
-        function isLogin() {
-            var $login = $("#login"),
-                personalClass = $("#personalClass"),
-                exit = $("#exit")
-            if ($.cookie('username') === undefined) {
-                $login.text("登录 / 注册")
-                $login.parent().attr("href", "./login.html")
-                personalClass.parent().css("display", "none")
-                exit.parent().css("display", "none")
-            } else {
-                $login.text($.cookie('User_TureName'))
-                $login.parent().attr("href", "javascript:;")
-                exit.parent().css("display", "inline-block")
-            }
+    function isLogin() {
+        var $login = $("#login"),
+            personalClass = $("#personalClass"),
+            exit = $("#exit")
+        if ($.cookie('username') === undefined) {
+            $login.text("登录 / 注册")
+            $login.parent().attr("href", "./login.html")
+            personalClass.parent().css("display", "none")
+            exit.parent().css("display", "none")
+        } else {
+            $login.text($.cookie('User_TureName'))
+            $login.parent().attr("href", "javascript:;")
+            exit.parent().css("display", "inline-block")
         }
-        isLogin();
-    })
-    // 轮播
+    }
+    isLogin();
+})
+
+// 轮播部分
 $(function() {
     var swiper = new Swiper('.swiper-container', {
         autoplay: {
@@ -70,6 +72,36 @@ $(function() {
     })
 })
 
+
+//正在直播部分
+$(function() {
+    // 直播标题
+    var playVideo_title = $("#playVideo_title"),
+        // 课堂时间
+        classTime = $("#classTime"),
+        // 讲师姓名
+        teacherName = $("#teacherName"),
+        // 主讲课程
+        majorCourse = $("#majorCourse"),
+        // 讲师简介
+        teacherNow = $("#teacherNow")
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: 'http://' + changeUrl.address + '/Class_Course_api?whereFrom=showInformation',
+        success: function(msg) {
+            console.log(msg.data1)
+            playVideo_title.text(msg.data1[0].CourseName)
+            classTime.text(msg.data1[0].ClassBegins)
+            teacherName.text(msg.data2[0].TeacherName)
+            majorCourse.text(msg.data2[0].TeacherCourse)
+            majorCourse.attr("title", msg.data2[0].TeacherCourse)
+            teacherNow.text(msg.data2[0].TeacherDescription)
+            teacherNow.attr("title", msg.data2[0].TeacherDescription)
+        }
+    })
+})
+
 //讲师层样式
 $(function() {
     var flag = true,
@@ -88,7 +120,7 @@ $(function() {
     })
 })
 
-
+// 课程列表部分s
 $(function() {
     var CourseContainer = $("#CourseContainer")
     $.ajax({

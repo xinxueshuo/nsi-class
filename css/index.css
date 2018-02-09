@@ -118,7 +118,7 @@
 .enterPlay>span {
     display: inline-block;
     font-size: 80px;
-    color: orange;
+    color: #222;
     opacity: .9;
     transition: all .3s;
     position: relative;
@@ -166,7 +166,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/circle.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/circle.png") no-repeat;
     background-size: 100%;
     z-index: 2;
     top: -165px;
@@ -178,7 +178,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/oval.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/oval.png") no-repeat;
     background-size: 100%;
     z-index: 1;
     top: 40px;
@@ -191,7 +191,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/diamond.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/diamond.png") no-repeat;
     background-size: 100%;
     z-index: 2;
     bottom: -126px;
@@ -205,7 +205,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/triangle.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/triangle.png") no-repeat;
     background-size: 100%;
     z-index: 3;
     opacity: .6;
@@ -427,7 +427,7 @@
 }
 
 .lecturerBg {
-    background: url("../images/eliteTbg.jpg") center center no-repeat #f3f5f7;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/eliteTbg.jpg") center center no-repeat #f3f5f7;
     background-size: cover;
 }
 
@@ -488,7 +488,7 @@
     position: absolute;
     width: 172px;
     height: 212px;
-    background: url("../images/weChat.png");
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/weChat.png");
     opacity: 1;
     top: -215px;
     left: -70px;
