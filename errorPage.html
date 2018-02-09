@@ -8,6 +8,19 @@
     <title>页面出错啦！</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .mb15 {
+            margin-bottom: 15px;
+        }
+        
+        span {
+            color: #f60
+        }
+        
+        .row {
+            color: #999;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,8 +32,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">页面将于<span id="second">5</span>秒跳转至<a href="./index.html">首页</a></p>
+                <div class="col-md-12 text-center">
+                    <h2 class="mb15">直播出错啦，请重新登录</h2>
+                    <h4 class="mb15">请检查您的登录状态</h4>
+                    <h4 class="mb15">是否从其他设备上登录</h4>
+                    <h4 class="mb15">新学说客服 <span>010-52468286</span></h4>
                 </div>
             </div>
         </div>
@@ -30,7 +46,7 @@
 </html>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script>
+<!-- <script>
     var second = $("#second").text();
     var timer = setInterval(function() {
         second--;
@@ -39,4 +55,4 @@
             window.location.href = "./index.html"
         }
     }, 1000)
-</script>
+</script> -->

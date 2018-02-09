@@ -1,13 +1,14 @@
-function isLogin() {
-    var $login = $("#login")
-    if ($.cookie('username') === undefined) {
-        $login.text("登录")
-    } else {
-        $login.text($.cookie('username'))
+$(function() {
+    function isLogin() {
+        var $login = $("#login")
+        if ($.cookie('username') === undefined) {
+            $login.text("登录")
+        } else {
+            $login.text($.cookie('username'))
+        }
     }
-}
-isLogin();
-
+    isLogin();
+})
 
 $(function() {
     //获取url地址问号后面部分
@@ -120,6 +121,7 @@ $(function() {
     //判断是否购买成功
     function checkPaymentState() {
         var buyNow = $("#buyNow"),
+            myModal = $("#myModal"),
             data = {
                 'UserMail': $.cookie('username'),
                 'ClassId': Id
@@ -133,11 +135,13 @@ $(function() {
             success: function(data) {
                 if (data.msg > 0) {
                     buyNow.click(function() {
+                        myModal.modal('hide')
                         alert("您已购买过该课程，请勿重复购买")
                         return false;
                     })
                 } else {
                     buyNow.on("click", function() {
+                        myModal.modal('show')
                         setTimeout(refresh, 3000)
 
                         function refresh() {

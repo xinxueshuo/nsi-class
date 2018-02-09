@@ -22,10 +22,11 @@
 .myLable li a.active {
     color: #fff;
     background: rgba(240, 20, 20, .8);
-    border-radius: 8px 0 0 8px;
+    border-radius: 8px;
 }
 
-.myLable li a.active::after {
+
+/* .myLable li a.active::after {
     display: block;
     content: "";
     position: absolute;
@@ -36,7 +37,7 @@
     border-top: 24px solid #fff;
     border-bottom: 24px solid #fff;
     border-left: 15px solid transparent;
-}
+} */
 
 .myLable li a.active i {
     color: #FFF;
@@ -246,16 +247,18 @@
 @media(max-width:769px) {
     .myLable {
         margin-bottom: 20px;
+        text-align: center;
     }
     .myLable li {
-        float: left;
-        width: 113px;
+        display: inline-block;
+        width: 112px;
     }
     .myLable li a {
         padding-left: 28px;
+        text-align: center;
     }
     .myLable li a i {
-        left: 2px;
+        left: 4px;
         font-size: 25px;
     }
     .minHeight500 {
