@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新学说国际教育学院-个人中心</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_8zqyoobdh5qrrudi.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_564697_s5gmnpbab949rudi.css">
+    <link rel="stylesheet" href="./css/common.css?v=02081703">
+    <link rel="stylesheet" href="./css/nav.css?v=02081703">
+    <link rel="stylesheet" href="./css/footer.css?v=02081703">
+    <link rel="stylesheet" href="./css/personalCenter.css?v=02081703">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header class="navbar navbar-default navbar-demo navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="./index.html" class="navbar-brand">
+                    <img src="./images/logo000.png" alt="">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./live.html?Id=10001">正在直播</a></li>
+                    <li><a href="./classCenter.html">课程中心</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./login.html"><span class="iconfont icon-gerenzhongxin navicon"></span><span id="login">登录 / 注册</span></a></li>
+                    <li><a href="./personalCenter.html" id="personalClass" class="personalClass">个人中心</a></li>
+                    <li><a href="javascript:;" id="exit" class="exit">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 顶部END -->
+    <!-- banner -->
+    <div class="container-fluid noPlPr pt66">
+        <img src="./images/banner1.jpg" alt="">
+    </div>
+    <!-- banner END-->
+
+    <!-- container -->
+    <div class="container ptb50lr15">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="myLable clearfix" id="myLable">
+                    <li><a href="javascript:;" class="active" id="myCourse"><i class="iconfont icon-kechengbiao"></i>我的课程</a></li>
+                    <li><a href="javascript:;"><i class="iconfont icon-shuzishurukuang"></i>课程购买码</a></li>
+                    <li><a href="javascript:;"><i class="iconfont icon-lianxikefu"></i>联系我们</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div class="rightBox minHeight400" id="rightBox">
+                    <div class="myClass">
+                        <div class="row" id="haveBoughtCourse">
+                            <p class="text-center notHaveCourse" id="notHaveCourse">暂无课程</p>
+                            <!-- <div class="col-md-3 col-sm-6">
+                                <div class="CourseContainer">
+                                    <a href="./detailLesson.html" target="_">
+                                        <div class="Course Course-up">
+                                            <img src="./images/CourseImage05.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="CourseInfo">
+                                        <p class="mtb5  oneline"><span class="CourseName">国际学校人力资源与构建</span></p>
+                                        <p class="mtb5 twoline"><span class="CourseDesc">一站式解决国际化学校运营各层面人才职业培训和能力提升</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="CourseContainer">
+                                    <a href="./detailLesson.html" target="_">
+                                        <div class="Course">
+                                            <img src="./images/CourseImage04.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="CourseInfo">
+                                        <p class="mtb5  oneline"><span class="CourseName">培训与发展</span></p>
+                                        <p class="mtb5 twoline"><span class="CourseDesc">一站式解决国际化学校运营各层面人才职业培训和能力提升</span></p>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="classBuyCode">
+                        <form action="">
+                            <input type="text" placeholder="请填写课程购买码" id="code">
+                            <button type="button" id="btn" class="confirm">确认</button>
+                        </form>
+                        <div id="myAlertSuccess" class="alert alert-success myAlertSuccess">
+                            <a href="javascript:;" class="close" onclick="$('#myAlertSuccess').hide()">&times;</a>
+                            <strong>课程购买成功！</strong>请查看我的课程。
+                        </div>
+                        <div id="myAlertError01" class="alert alert-danger myAlertError">
+                            <a href="javascript:;" class="close" onclick="$('#myAlertError01').hide()">&times;</a>
+                            <strong>课程购买失败！</strong>请检查您的课程购买码是否填写正确。
+                        </div>
+                        <div id="myAlertError02" class="alert alert-danger myAlertError">
+                            <a href="javascript:;" class="close" onclick="$('#myAlertError02').hide()">&times;</a>
+                            <strong>课程购买失败！</strong>请联系新学说客服中心 010-52468286。
+                        </div>
+                    </div>
+                    <div class="connectUs">
+                        <p>公司地点：<span>北京市西城区新风街2号天成科技大厦A座1006</span></p>
+                        <p>客服电话：<span>010-52468286</span></p>
+                        <p>手机：<span>15010927730</span></p>
+                        <p>邮箱：<span>info@xinxueshuo.cn</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container END-->
+
+    <!-- footer -->
+    <div class="bgfff topShadow">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="footer-link">
+                        <a href="javascript:;">关于我们</a>
+                        <a href="javascript:;">联系我们</a>
+                        <a href="javascript:;">意见反馈</a>
+                    </div>
+                    <p class="footer-copyright">©&nbsp;2018&nbsp;xinxueshuo.cn&nbsp;京ICP备&nbsp;16031987号-1</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="theThreePartLink">
+                        <p class="text-center">
+                            <a href="javascript:;" class="weChat iconfont icon-unie655" title="微信">
+                                <i class="weChat-pic"></i>
+                            </a>
+                        </p>
+                        <p class="text-center weChat-desc">官方公众号</p>
+                    </div>
+                    <div class="theThreePartLink">
+                        <p class="text-center">
+                            <a href="https://www.linkedin.com/in/newschool-insight-b96319139" target="_" class="weChat iconfont icon-linkedin0" title="领英">
+                            </a>
+                        </p>
+                        <p class="text-center weChat-desc">官方领英</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer END-->
+    <!-- backtoTop -->
+    <div class="backtoTop animated" id="backtoTop">
+        <a href="javascript:;" class="toTop">
+            <span class="iconfont icon-icon3"></span>
+        </a>
+    </div>
+    <!-- backtoTop END-->
+</body>
+
+</html>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="./js/config.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/common.js?v=02081703"></script>
+<script src="./js/personalCenter.js?v=02081703"></script>

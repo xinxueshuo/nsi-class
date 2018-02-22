@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>新学说国际教育学院</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_560175_05y2k7t8v3sug14i.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_554630_8zqyoobdh5qrrudi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="./css/common.css?v=02081703">
+    <link rel="stylesheet" href="./css/nav.css?v=02081703">
+    <link rel="stylesheet" href="./css/footer.css?v=02081703">
+    <link rel="stylesheet" href="./css/detailClass.css?v=02081703">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <style>
+        @font-face {
+            font-family: 'Glyphicons Halflings';
+            src: url('../fonts/glyphicons-halflings-regular.eot');
+            src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header class="navbar navbar-inverse navbar-demo navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a href="./index.html" class="navbar-brand">
+                    <img src="./images/logofff.png" alt="">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./live.html?Id=10001">正在直播</a></li>
+                    <li><a href="./classCenter.html">课程中心</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./login.html"><span class="iconfont icon-gerenzhongxin navicon"></span><span id="login">登录 / 注册</span></a></li>
+                    <li><a href="./personalCenter.html" id="personalClass" class="personalClass">个人中心</a></li>
+                    <li><a href="javascript:;" id="exit" class="exit">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 顶部END -->
+    <!-- content -->
+    <div class="container-fluid pt66">
+        <div class="container">
+            <div class="lessonContainer mt30 ">
+                <div class="row lesson_box">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 lesson_imgBox">
+                        <div class="lesson_img">
+                            <img src="./images/lesson_img.gif" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 lesson_desc">
+                        <div class="lesson_content">
+                            <p class="LessonName" id="CourseName">课程的名字</p>
+                            <p id="ClassId" style="display:none">10001</p>
+                            <p>开课时间：<span id="ClassBegins">2017年12月12日</span></p>
+                            <p>时长：<span>2小时</span></p>
+                            <p class="buy">已有 <span>303</span> 人购买</p>
+                            <p class="score">评分：<span>9.9</span>分&nbsp;&nbsp;&nbsp;<i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i><i class="iconfont icon-stars star"></i></p>
+                            <p class="price">￥<span id="CoursePrice" class="CoursePrice">8888</span><small>(您购买的是整套课程，暂不单售)</small></p>
+                            <button type="button" class="buyNow" id="buyNow"><span class="iconfont icon-gouwuche3"></span>购买整套</button>
+                            <button type="button" class="watchNow disabled notAllow " id="watchNow"><span class="iconfont icon-bofang1"></span>立即观看</button>
+                            <p><a href="./personalCenter.html" id="courseCode">课程购买码</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content END-->
+    <!-- Lesson-desc -->
+    <div class="container-fluid">
+        <div class="container w1200 detailLesson-Tab">
+            <ul id="myTab" class="nav nav-tabs text-center myTab">
+                <li class="active">
+                    <a href="#tab01" data-toggle="tab">
+                课程介绍
+            </a>
+                </li>
+                <li>
+                    <a href="#tab02" data-toggle="tab">
+                讲师介绍
+            </a>
+                </li>
+                <li>
+                    <a href="#tab03" data-toggle="tab">
+                课程咨询
+            </a>
+                </li>
+                <li>
+                    <a href="#tab04" data-toggle="tab">
+                附件资料
+            </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="myTabContent" class="container tab-content">
+        <div class="tab-pane fade in active" id="tab01">
+            <p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+        </div>
+        <div class="tab-pane fade" id="tab02">
+            <img src="./images/bg.gif" class="col-lg-9 col-md-9 col-sm-9 teacherIntroduction">
+            <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+        </div>
+        <div class="tab-pane fade" id="tab03">
+            <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+        </div>
+        <div class="tab-pane fade" id="tab04">
+            <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
+            </p>
+        </div>
+    </div>
+    <!-- Lesson-desc END-->
+    <!-- 订单 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header order-header">
+                    <button type="button" class="close cancle" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title order-title" id="myModalLabel"><span class="order-logo"></span>新学说支付平台</h4>
+                </div>
+                <div class="modal-body order-body">
+                    <div class="orderDesc">
+                        <!-- <p>订单编号：<span>正在加载</span></p> -->
+                        <!-- <p>订单类型：<span>1111111</span></p> -->
+                        <p class="orderDesc-shouldPay">应付金额：<b>￥</b><span class="orderDesc-price" id="orderDesc-price">正在加载</span></p>
+                    </div>
+                    <div class="payment">
+                        <ul id="myPayment" class="nav nav-tabs">
+                            <li class="active"><a href="#pay01" data-toggle="tab" class="pay pay01">
+                                        微信支付</a></li>
+                            <!-- <li><a href="#pay02" data-toggle="tab" class="pay pay02">支付宝</a></li> -->
+                        </ul>
+                        <div class="tab-content payment-content">
+                            <div class="tab-pane fade in active" id="pay01">
+                                <div class="payContent">
+                                    <div><span class="wechat"></span></div>
+                                    <div class="text-center">
+                                        <p><span class="qrCode" id="qrCode"></span></p>
+                                        <p><span class="qrCodeDesc"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="pay02">
+                                <div class="payContent">支付宝</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p class="dis_ib problem"><span class="iconfont icon-wentidingdan"></span>支付遇到问题？请联系新学说客服 <b>010-52468286</b></p>
+                    <button type="button" class="btn btn-default cancle" data-dismiss="modal" id="cancle">取消</button>
+                    <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- 订单 END-->
+    <!-- footer -->
+    <div class="bgfff topShadow">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="footer-link">
+                        <a href="javascript:;">关于我们</a>
+                        <a href="javascript:;">联系我们</a>
+                        <a href="javascript:;">意见反馈</a>
+                    </div>
+                    <p class="footer-copyright">©&nbsp;2018&nbsp;xinxueshuo.cn&nbsp;京ICP备&nbsp;16031987号-1</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <div class="theThreePartLink">
+                        <p class="text-center">
+                            <a href="javascript:;" class="weChat iconfont icon-unie655" title="微信">
+                                <i class="weChat-pic"></i>
+                            </a>
+                        </p>
+                        <p class="text-center weChat-desc">官方公众号</p>
+                    </div>
+                    <div class="theThreePartLink">
+                        <p class="text-center">
+                            <a href="https://www.linkedin.com/in/newschool-insight-b96319139" target="_" class="weChat iconfont icon-linkedin0" title="领英">
+                            </a>
+                        </p>
+                        <p class="text-center weChat-desc">官方领英</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer END-->
+    <!-- backtoTop -->
+    <div class="backtoTop animated" id="backtoTop">
+        <a href="javascript:;" class="toTop">
+            <span class="iconfont icon-icon3"></span>
+        </a>
+    </div>
+    <!-- backtoTop END-->
+</body>
+
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./js/jquery-3.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="./js/common.js?v=02081703"></script>
+<script src="./js/config.js"></script>
+<script src="./js/jquery.cookie.js"></script>
+<script src="./js/detailClass.js?v=02081703"></script>

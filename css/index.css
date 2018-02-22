@@ -1,72 +1,73 @@
-/* 顶部 */
-
-.container-fluid {
-    padding: 0;
-}
-
 .row,
 .container {
     transition: all 1s;
 }
 
-.top {
-    background: #225189;
-}
 
-.containerTop {
-    padding-left: 0;
-    padding-right: 0;
-    height: 50px;
-}
-
-.containerTop .logo {
-    display: inline-block;
-    background: url("../images/logo01.png") no-repeat;
-    background-size: 70% 83%;
-    width: 170px;
-    height: 50px;
-    background-position: 40px 5px;
-}
-
-.nav>li>a {
-    color: #fff;
-}
-
-.nav>li {
-    background: #225189;
-}
-
-.nav>li>a:hover {
-    color: #225189;
-    background: rgb(248, 246, 246);
-}
+/* 顶部 */
 
 .navbar {
-    border: none;
     margin-bottom: 0;
+    border-radius: 0;
+    min-height: 55px;
+    margin-bottom: 0;
+    /* border: 1px solid transparent; */
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, .1);
 }
 
-.navbar-nav {
-    margin: 0 -15px;
-}
-
-.navbar-header {
-    margin-right: 20px;
+.navbar-brand {
+    height: auto;
+    padding: 5px 15px;
 }
 
 .navbar-toggle {
-    border: 1px solid #FFF;
-    color: #FFF;
+    margin-top: 15px;
 }
 
-.navbar-toggle>.icon-bar {
-    background: #FFF;
+.navbar-nav>li {
+    height: 65px;
+    line-height: 68px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
-.navbar-collapse {
-    position: relative;
-    z-index: 10000;
-    border-color: #1983bf;
+.navbar-right>li {
+    padding-right: 0;
+}
+
+.navbar-nav>li>a {
+    display: inline-block;
+    font-size: 17px;
+}
+
+.navicon {
+    font-size: 28px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+
+.nav>li>a {
+    padding: 15px 10px;
+}
+
+.personalClass,
+.exit {
+    display: none;
+}
+
+@media(max-width:767px) {
+    .navbar-nav>li {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 0;
+    }
+}
+
+@media(max-width:996px) {
+    .navbar-nav>li {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 
@@ -117,11 +118,12 @@
 .enterPlay>span {
     display: inline-block;
     font-size: 80px;
-    color: orange;
+    color: #222;
     opacity: .9;
     transition: all .3s;
     position: relative;
-    animation: autoBig 2s infinite ease-in-out;
+    animation: autoBig 1.3s infinite ease-in-out;
+    text-shadow: 0 3px 8px rgba(7, 17, 27, 0.4);
 }
 
 .enterPlay>span:hover {
@@ -164,7 +166,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/circle.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/circle.png") no-repeat;
     background-size: 100%;
     z-index: 2;
     top: -165px;
@@ -176,7 +178,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/oval.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/oval.png") no-repeat;
     background-size: 100%;
     z-index: 1;
     top: 40px;
@@ -189,7 +191,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/diamond.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/diamond.png") no-repeat;
     background-size: 100%;
     z-index: 2;
     bottom: -126px;
@@ -203,7 +205,7 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background: url("../images/homochromyBg/triangle.png") no-repeat;
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/homochromyBg/triangle.png") no-repeat;
     background-size: 100%;
     z-index: 3;
     opacity: .6;
@@ -215,7 +217,7 @@
 }
 
 .teacherDesc {
-    min-height: 430px;
+    min-height: 420px;
     /* background-color: #f8f8f8; */
     padding: 11px 15px;
     position: relative;
@@ -250,8 +252,12 @@
     -webkit-line-clamp: 4;
 }
 
+.pt30-pt15 {
+    padding-top: 30px;
+}
 
-/* Course */
+
+/* Course 课程列表*/
 
 .types-title {
     font-weight: 700;
@@ -275,14 +281,24 @@
 }
 
 .CourseInfo p:nth-child(2) {
+    height: 48px;
     color: #93999F;
 }
 
 .CourseName {
+    display: inline-block;
     font-size: 16px;
     font-weight: 400;
     color: #07111B;
     transition: all .3s;
+}
+
+.CourseDesc {
+    max-height: 48px;
+    font-size: 12px;
+    color: #93999F;
+    letter-spacing: -0.1px;
+    line-height: 24px;
 }
 
 .CourseContainer:hover .CourseName {
@@ -292,12 +308,55 @@
 .Course img {
     width: 100%;
     transition: all .5s;
+    border-radius: 8px;
 }
 
 .CourseContainer {
     position: relative;
     transform-style: preserve-3d;
     perspective: 800px;
+}
+
+.new {
+    position: absolute;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    top: -10px;
+    left: -10px;
+    z-index: 4;
+    font-size: 14px;
+    color: #FFF;
+    line-height: 20px;
+    padding: 2px 8px;
+    background: linear-gradient(-90deg, #f68688 0, #f02930 100%);
+    box-shadow: 0 0 20px #f68688;
+}
+
+.viewBack {
+    position: absolute;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    top: -10px;
+    left: -10px;
+    z-index: 4;
+    font-size: 14px;
+    color: #FFF;
+    line-height: 20px;
+    padding: 2px 8px;
+    background: linear-gradient(-90deg, #86eff6 0, #2990f0 100%);
+}
+
+.makepreparations {
+    position: absolute;
+    border: 2px solid #FFF;
+    border-radius: 12px;
+    top: -10px;
+    left: -10px;
+    z-index: 4;
+    font-size: 14px;
+    color: #FFF;
+    padding: 2px 8px;
+    background: linear-gradient(-90deg, #f6eb86 0, #f0aa29 100%);
 }
 
 .Course-up {
@@ -360,6 +419,48 @@
 }
 
 
+/* 讲师 */
+
+.lecturer {
+    position: relative;
+    /* visibility: hidden; */
+}
+
+.lecturerBg {
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/eliteTbg.jpg") center center no-repeat #f3f5f7;
+    background-size: cover;
+}
+
+.lecturerTitle {
+    font-weight: 700;
+    color: #f1f1f1;
+}
+
+.lecturerTitle>small {
+    color: #eae7e7;
+}
+
+.lecturerBox {
+    padding: 30px 15px;
+    background: rgba(255, 255, 255, .8);
+    transition: all .3s;
+}
+
+.lecturerBox:hover {
+    background-color: #ffffff;
+}
+
+.lecturerName {
+    color: #07111b;
+    text-shadow: 0 0 0;
+}
+
+.lecturerDesc {
+    color: #4D555D;
+    text-shadow: 0 0 0;
+}
+
+
 /* footer */
 
 .footer {
@@ -387,11 +488,12 @@
     position: absolute;
     width: 172px;
     height: 212px;
-    background: url("../images/weChat.png");
+    background: url("http://nsi.oss-cn-zhangjiakou.aliyuncs.com/nsi-class/weChat.png");
     opacity: 1;
     top: -215px;
     left: -70px;
     display: none;
+    z-index: 999;
 }
 
 .weChat:hover .weChat-pic {
@@ -470,21 +572,6 @@
 
 /* @ */
 
-@media (min-width: 1200px) {
-    .container {
-        width: 1200px;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-    }
-}
-
-@media (max-width:992px) and (min-width:767px) {
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-    }
-}
-
 @media (max-width:769px) {
     .teacherDesc {
         margin-top: 15px;
@@ -509,6 +596,12 @@
     }
 }
 
+@media(max-width:991px) {
+    .teacherDesc {
+        margin-top: 15px;
+    }
+}
+
 @media (max-width:769px) {
     .champion {
         left: 300px;
@@ -516,8 +609,14 @@
     .ptb30lr15 {
         padding: 15px;
     }
+    .pt30-pt15 {
+        padding-top: 15px;
+    }
     .CourseContainer {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .lecturerBox {
+        margin-top: 15px;
     }
 }
 
@@ -540,6 +639,10 @@
     }
     .enterPlay>span {
         font-size: 60px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
     }
 }
 

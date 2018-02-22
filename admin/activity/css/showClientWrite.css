@@ -74,6 +74,16 @@ tr:hover {
     margin-right: 10px;
 }
 
+.logo01 {
+    margin-right: 5px;
+}
+
+.logo02 {
+    margin-left: 15px;
+    font-size: 29px;
+    vertical-align: middle;
+}
+
 .activityListDesc_container,
 .activityDesc_container {
     background-color: #FFF;
@@ -97,6 +107,11 @@ tr:hover {
 .active {
     background: #FF8533;
     color: #FFF;
+}
+
+.total {
+    font-weight: 700;
+    width: 100%;
 }
 
 

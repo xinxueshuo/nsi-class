@@ -65,11 +65,7 @@ $(function() {
                                         activeContent.children("tr").eq(i).append('<td>' + eval("msg.data[i].Content" + (j + 3)) + '</td>')
                                     }
                                 }
-                                for (var i = 0; i < $("td").length; i++) {
-                                    if ($("td").eq(i).text() == "null") {
-                                        $("td").eq(i).text("未填写")
-                                    }
-                                }
+                                activeContent.append(`<tr><td class="total">学员总人数：${msg.data.length}人</td></tr>`)
                             },
                             error: function() {
                                 console.log("error")
@@ -98,6 +94,7 @@ $(function() {
                             activeContent.children("tr").eq(i).append('<td>' + eval("msg.data[i].Content" + (j + 3)) + '</td>')
                         }
                     }
+                    $(".total").text(msg.data.length)
                 },
                 error: function(msg) {
                     console.log("error")

@@ -54,6 +54,10 @@
         margin-top: 45px;
     }
     
+    .mb5 {
+        margin-bottom: 5px;
+    }
+    
     .mb10 {
         margin-bottom: 10px;
     }
@@ -68,6 +72,26 @@
     
     .mtb5 {
         margin: 5px 0
+    }
+    
+    .mtb30 {
+        margin: 30px 0;
+    }
+    
+    .pt15 {
+        padding-top: 15px;
+    }
+    
+    .pt30 {
+        padding-top: 30px;
+    }
+    
+    .pt66 {
+        padding-top: 66px;
+    }
+    
+    .ptb30 {
+        padding: 30px 0;
     }
     
     .ptb30lr15 {
@@ -106,6 +130,18 @@
         box-shadow: 0 0 10px #666;
     }
     
+    .box_shadow_index {
+        box-shadow: 0 12px 24px 0 rgba(7, 17, 27, .2);
+    }
+    
+    .fl {
+        float: left;
+    }
+    
+    .fr {
+        float: right;
+    }
+    
     .clearfix:after {
         content: '.';
         display: block;
@@ -135,6 +171,11 @@
         box-shadow: 0 2px 4px 0 rgba(7, 17, 27, .06);
     }
     
+    .topShadow {
+        margin-top: 30px;
+        box-shadow: 0 -2px 8px 0 rgba(7, 17, 27, .06);
+    }
+    
     .letterspacing1 {
         letter-spacing: 1px;
     }
@@ -143,6 +184,14 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    
+    .twoline {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
     
     .multiline {
@@ -158,10 +207,52 @@
         text-shadow: 0 4px 8px rgba(7, 17, 27, 0.4);
     }
     
+    .minHeight400 {
+        min-height: 400px;
+    }
+    
     @media (min-width: 1200px) {
         .w1200 {
             width: 1200px;
             padding-left: 0;
             padding-right: 0;
         }
+    }
+    /* 回到顶部 */
+    
+    .backtoTop {
+        position: fixed;
+        bottom: 80px;
+        right: 35px;
+        z-index: 999;
+        border-radius: 50%;
+        display: none;
+    }
+    
+    .toTop {
+        font-size: 40px;
+        color: rgb(201, 214, 222);
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 43px;
+        box-shadow: rgba(15, 37, 64, 0.1) 0px 5px 15px 0px;
+        cursor: pointer;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        transition: bottom 0.3s ease 0s;
+        text-align: center;
+    }
+    
+    .toTop:link {
+        color: rgb(201, 214, 222);
+    }
+    
+    .toTop:hover {
+        color: #99a1a6
+    }
+    
+    .toTop>span {
+        font-size: 24px;
     }
